@@ -1905,11 +1905,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\New folder (4)\\PhoneBook\\PhoneBook.Application\\PhoneBook.Application.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Application\\PhoneBook.Application.csproj",
       "projectName": "PhoneBook.Application",
-      "projectPath": "C:\\Users\\user\\Desktop\\New folder (4)\\PhoneBook\\PhoneBook.Application\\PhoneBook.Application.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Application\\PhoneBook.Application.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\New folder (4)\\PhoneBook\\PhoneBook.Application\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

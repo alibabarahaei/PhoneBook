@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Presentation.Razor", "PhoneBook.Presentation.Razor\PhoneBook.Presentation.Razor.csproj", "{456F189E-7F91-4578-ABCD-6B499E1BB13C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneBook.Presentation.Razor", "PhoneBook.Presentation.Razor\PhoneBook.Presentation.Razor.csproj", "{456F189E-7F91-4578-ABCD-6B499E1BB13C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Application", "PhoneBook.Application\PhoneBook.Application.csproj", "{1C93B1E9-4DCD-4B14-B54C-5DA152F1228D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneBook.Application", "PhoneBook.Application\PhoneBook.Application.csproj", "{1C93B1E9-4DCD-4B14-B54C-5DA152F1228D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Domain", "PhoneBook.Domain\PhoneBook.Domain.csproj", "{A2A402DC-5CEE-45FF-A3B3-3EFE24B2F780}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneBook.Domain", "PhoneBook.Domain\PhoneBook.Domain.csproj", "{A2A402DC-5CEE-45FF-A3B3-3EFE24B2F780}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Infrastructure.EFCore", "PhoneBook.Infrastructure.EFCore\PhoneBook.Infrastructure.EFCore.csproj", "{37EAA2DC-4825-422A-A2B8-BD62A7A86A59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneBook.Infrastructure.EFCore", "PhoneBook.Infrastructure.EFCore\PhoneBook.Infrastructure.EFCore.csproj", "{37EAA2DC-4825-422A-A2B8-BD62A7A86A59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
