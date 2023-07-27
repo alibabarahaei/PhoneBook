@@ -2,3 +2,80 @@
 @model PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account.LoginModel
 @{
 }
+
+<div class="container" style="height: 100vh;">
+    <div class="row justify-content-center align-items-center ">
+        <div class="col-md-6 col-lg-5 col-xl-4 row-main-page row-main-page-right">
+            <div class="row text_align_center mb-4">
+                <h3>ورود</h3>
+            </div>
+            <div class="row">
+                <form method="Post">
+                    <div class="mb-2">
+                        <img src="img/people.svg" alt="">
+                        نام کاربری
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input class=" form-control-lg input-form-account " type="text"
+                                   placeholder="نام کاربری" asp-for="UserName">
+                            <span asp-validation-for="UserName" class="text-danger" style="font-size: 13px"></span>
+                        </div>
+                    </div>
+                    <div class="mt-3 mb-2">
+                        <img src="img/lock.svg" alt="">
+                        رمز عبور
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input class=" form-control-lg input-form-account" type="password"
+                                   placeholder="رمز عبور" asp-for="Password">
+                            <span asp-validation-for="Password" class="text-danger" style="font-size: 13px"></span>
+                        </div>
+                    </div>
+                    <button class="btn-form-account mt-3">
+                        ورود
+                    </button>
+                    <div class="row justify-content-between">
+                        <div class="col-6 mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input input-check-remember-me" type="checkbox" value=""
+                                       id="flexCheckDefault">
+                                <label class="form-check-label label-remember-password" for="flexCheckDefault">
+                                    مرا بخاطر بسپار
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <a href="" class="a-forgot-password">فراموشی رمز عبور </a>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center account-accounts">
+                        <a href="#" class="d-flex align-items-center justify-content-center account-account">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="d-flex align-items-center justify-content-center account-account">
+                            <i class="fa-brands fa-google"></i>
+                        </a>
+                        <a href=" #" class="d-flex align-items-center justify-content-center account-account">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-5 col-xl-4 text_align_center row-main-page row-main-page-left d-none d-md-block">
+            <p></p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+

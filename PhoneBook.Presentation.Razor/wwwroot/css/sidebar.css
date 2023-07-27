@@ -1,0 +1,110 @@
+@font-face {
+    font-family: IRANSans;
+    src: url(../fonts/IRANSansWeb.ttf);
+}
+
+body {
+    font-family: IRANSans;
+    background-color: var( --gray-light);
+}
+
+a {
+    cursor: pointer;
+}
+
+.table-sidebar {
+    color: var(--gray-dark);
+}
+
+.success {
+    color: var(--green-light) !important;
+}
+
+.danger {
+    color: #FF4961 !important;
+}
+
+.main-section {
+    height: 100vh;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid var(--magenta-middle);
+}
+
+
+.td-color {
+    color: var(--gray-dark) !important;
+}
+
+
+.a-sidebar {
+    background-color: var(--pink-darker) !important;
+}
+
+.i-sidebar {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.card-table {
+    border-color: var(--magenta-middle);
+}
+
+.card .card-header {
+    padding: 1.5rem;
+    border-bottom: none;
+    background-color: transparent;
+}
+
+.card .card-header .card-title-wrap {
+    margin-right: -1.5rem;
+    padding-right: 1.5rem;
+    border-right: 3px solid #E9ECEF;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+}
+
+.card .card-block {
+    padding: 1rem 1.5rem 1.5rem;
+}
+
+.tr-table {
+    border-top: 1px solid var(--pink-darker);
+}
+
+.bar-table {
+    border-right: 3px solid var(--pink-darker) !important;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #FFFFFF;
+    background-color: var(--magenta-middle);
+    border-color: var(--pink-middle);
+}
+
+.page-link:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: var(--pink-darker);
+    background-color: #FFFFFF;
+    border: 1px solid #DEE2E6;
+}
+
+.p-0 {
+    padding: 0 !important;
+    margin: 5px;
+}

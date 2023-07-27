@@ -23,6 +23,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/Desktop/New folder (5)/PhoneBook/PhoneBook.Presentation.Razor/Areas/Identity/Pages/Shared/_FooterRefrencesPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcU2hhcmVkXF9Gb290ZXJSZWZyZW5jZXNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/New folder (5)/PhoneBook/PhoneBook.Presentation.Razor/Areas/Identity/Pages/Shared/_HeaderReferencesPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcU2hhcmVkXF9IZWFkZXJSZWZlcmVuY2VzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/Desktop/New folder (5)/PhoneBook/PhoneBook.Presentation.Razor/Areas/Identity/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -35,6 +43,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/Desktop/New folder (5)/PhoneBook/PhoneBook.Presentation.Razor/Pages/AddContact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQ29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/New folder (5)/PhoneBook/PhoneBook.Presentation.Razor/Pages/EditContact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdENvbnRhY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/Desktop/New folder (5)/PhoneBook/PhoneBook.Presentation.Razor/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -45,6 +61,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/user/Desktop/New folder (5)/PhoneBook/PhoneBook.Presentation.Razor/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/New folder (5)/PhoneBook/PhoneBook.Presentation.Razor/Pages/Shared/_FooterRefrencesPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Gb290ZXJSZWZyZW5jZXNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/New folder (5)/PhoneBook/PhoneBook.Presentation.Razor/Pages/Shared/_HeaderReferencesPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9IZWFkZXJSZWZlcmVuY2VzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/New folder (5)/PhoneBook/PhoneBook.Presentation.Razor/Pages/Shared/_SiteMessagesPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9TaXRlTWVzc2FnZXNQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/Desktop/New folder (5)/PhoneBook/PhoneBook.Presentation.Razor/Pages/Shared/_ValidationScriptsPartial.cshtml]

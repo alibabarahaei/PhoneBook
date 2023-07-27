@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using PhoneBook.Domain.Models.User;
+using System.Reflection;
+using PhoneBook.Domain.Models.Contacts;
 
 namespace PhoneBook.Infrastructure.EFCore.Context
 {
@@ -18,32 +15,19 @@ namespace PhoneBook.Infrastructure.EFCore.Context
 
         }
 
-
+        #region contact
+        public DbSet<Contact> Contacts { get; set; }
+        #endregion
 
 
         #region on model creating
-
-
-
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
-
-
-
-
-
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(s => s.GetForeignKeys()))
             {
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;
             }
-
-
             base.OnModelCreating(modelBuilder);
-
-
-
             #region ChangeTableName(Identity)
             modelBuilder.Entity<ApplicationUser>().ToTable("Users").Property(p => p.Id).HasColumnName("UserId");
             modelBuilder.Entity<IdentityUserRole<string>>().ToTable("UserRoles");
@@ -53,10 +37,7 @@ namespace PhoneBook.Infrastructure.EFCore.Context
             modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaim");
             modelBuilder.Entity<IdentityRole>().ToTable("Roles");
             #endregion
-
-
         }
-
         #endregion
     }
 }

@@ -27,6 +27,17 @@ body {
     padding: 24px;
 }
 
+.row-main-page-left-register {
+    height: 510px;
+    background-image: linear-gradient(to left bottom, var(--pink-lighter), var(--pink-light), var(--pink-middle), var(--pink-dark), var(--pink-darker));
+}
+
+.row-main-page-right-register {
+    height: 510px;
+    background-color: var(--white-lighter);
+    padding: 24px;
+}
+
 .input-form-account {
     border-radius: 50px;
     border: 1px solid transparent;

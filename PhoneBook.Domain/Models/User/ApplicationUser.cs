@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-using Microsoft.AspNetCore.Identity;
+using System.Net.Sockets;
+using PhoneBook.Domain.Models.Contacts;
 
 namespace PhoneBook.Domain.Models.User
 {
@@ -26,6 +22,15 @@ namespace PhoneBook.Domain.Models.User
         [Display(Name = "تصویر پروفایل")] public string? PathProfileImage { get; set; }
 
         public char? Gender { get; set; } = GenderTypes.Unknown;
+
+
+
+        #region relations
+
+        
+        public ICollection<Contact> Contacts { get; set; }
+
+        #endregion
 
 
     }

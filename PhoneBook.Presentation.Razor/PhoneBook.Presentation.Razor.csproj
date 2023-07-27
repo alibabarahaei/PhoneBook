@@ -18,4 +18,8 @@
     <ProjectReference Include="..\PhoneBook.Infrastructure.EFCore\PhoneBook.Infrastructure.EFCore.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\contact\thumb\" />
+  </ItemGroup>
+
 </Project>

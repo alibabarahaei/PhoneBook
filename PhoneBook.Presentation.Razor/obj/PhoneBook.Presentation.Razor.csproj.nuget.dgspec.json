@@ -31,7 +31,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Domain\\PhoneBook.Domain.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Domain\\PhoneBook.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -51,6 +55,14 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.8, )"
+            },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[2.1.3, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [

@@ -1,13 +1,15 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using PhoneBook.Application.InterfaceServices;
 using PhoneBook.Application.Security.Identity;
+using PhoneBook.Application.Services;
 using PhoneBook.Domain.InterfaceRepositories.Base;
 using PhoneBook.Domain.Models.User;
 using PhoneBook.Infrastructure.EFCore.Context;
+using PhoneBook.Infrastructure.EFCore.Repository.Base;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
-using Microsoft.EntityFrameworkCore;
-using PhoneBook.Infrastructure.EFCore.Repository.Base;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -55,7 +57,8 @@ builder.Services.AddSingleton<HtmlEncoder>(HtmlEncoder.Create(allowedRanges: new
 
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IContactService, ContactService>();
 
 #region Config Database
 builder.Services.AddDbContext<PhoneBookDbContext>(option =>

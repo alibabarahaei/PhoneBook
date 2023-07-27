@@ -2,3 +2,60 @@
 @model PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account.RegisterModel
 @{
 }
+
+
+
+
+
+<div class="container" style="height: 100vh;">
+    <div class="row justify-content-center align-items-center ">
+        <div class="col-md-6 col-lg-5 col-xl-4 row-main-page row-main-page-right-register">
+            <div class="row text_align_center mb-4">
+                <h3>ثبت نام</h3>
+            </div>
+            <div class="row">
+                <form method="Post" >
+                    <div class="mb-2">
+                        <img src="img/people.svg" alt="">
+                        نام کاربری
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input class=" form-control-lg input-form-account " type="text" asp-for="UserName"
+                                   placeholder="نام کاربری">
+                            <span asp-validation-for="UserName" class="text-danger" style="font-size: 13px"></span>
+                        </div>
+                    </div>
+                    <div class=" mt-3 mb-2">
+                        <img src="img/lock.svg" alt="">
+                        رمز عبور
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input class=" form-control-lg input-form-account " type="password" asp-for="Password"
+                                   placeholder="رمز عبور">
+                            <span asp-validation-for="Password" class="text-danger" style="font-size: 13px"></span>
+                        </div>
+                    </div>
+                    <div class=" mt-3 mb-2">
+                        <img src="img/lock.svg" alt="">
+                        تکرار رمز عبور
+                    </div>
+                    <div class="row">
+                        <div class="col mb-2 ">
+                            <input class=" form-control-lg input-form-account" type="password" asp-for="ConfirmPassword"
+                                   placeholder="تکرار رمز عبور ">
+                            <span asp-validation-for="ConfirmPassword" class="text-danger" style="font-size: 13px"></span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-form-account mt-3">
+                        ثبت نام
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-5 col-xl-4 text_align_center row-main-page row-main-page-left-register d-none d-md-block">
+            <p></p>
+        </div>
+    </div>
+</div>

@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PhoneBook.Domain.InterfaceRepositories.Base;
 using PhoneBook.Domain.Models.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using PhoneBook.Infrastructure.EFCore.Context;
 
 namespace PhoneBook.Infrastructure.EFCore.Repository.Base

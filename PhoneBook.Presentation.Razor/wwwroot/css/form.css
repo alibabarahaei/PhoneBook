@@ -1,0 +1,145 @@
+form .form-section {
+    color: #343A40;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #343A40;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: var(--gray-dark);
+}
+
+.btn-success {
+    background-color: var(--green-light) !important;
+    color: var(--white-lighter) !important;
+    border-color: var(--green-light);
+}
+
+.btn-danger {
+    color: var(--white-lighter) !important;
+    background-color: var( --red-light);
+    border-color: var( --red-light);
+}
+
+form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.border-primary {
+    border-color: var(--pink-darker) !important;
+}
+
+.bar {
+    border-right: 3px solid var(--pink-darker) !important;
+}
+
+.custom-file-input {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: -webkit-calc(2.25rem + 2px);
+    height: -moz-calc(2.25rem + 2px);
+    height: calc(2.25rem + 2px);
+    margin: 0;
+    opacity: 0;
+}
+
+.input-group {
+    display: -webkit-flex;
+}
+
+    .input-group > .custom-file {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .input-group > .form-control, .input-group > .custom-select, .input-group > .custom-file {
+        position: relative;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 1 auto;
+        -moz-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        width: 1%;
+        margin-bottom: 0;
+    }
+
+.custom-file {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: -webkit-calc(2.25rem + 2px);
+    height: -moz-calc(2.25rem + 2px);
+    height: calc(2.25rem + 2px);
+    margin-bottom: 0;
+}
+
+.custom-file-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: -webkit-calc(2.25rem + 2px);
+    height: -moz-calc(2.25rem + 2px);
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #FFFFFF;
+    border: 1px solid #CED4DA;
+    border-radius: 0.25rem;
+}
+
+.input-group > .custom-file:not(:first-child) .custom-file-label {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.drop-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed var(--pink-darker);
+    color: var(--gray-dark);
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+    .drop-container:hover {
+        background: #eee;
+        border-color: var(--pink-darker);
+    }
+
+        .drop-container:hover .drop-title {
+            color: var(--gray-dark);
+        }
+
+.drop-title {
+    color: var(--gray-dark);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+}
+
+#images {
+    color: var(--gray-dark);
+}
