@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JvY95oH6/AeaIDiclE9YyBOyCbRmkaJZ3GEgzLwvee0=",
+  "Hash": "hVitL++YoajBHxPpb/zLhEFi2G27EWoNgMi135fnm2A=",
   "Source": "PhoneBook.Presentation.Razor",
   "BasePath": "_content/PhoneBook.Presentation.Razor",
   "Mode": "Default",
@@ -780,6 +780,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\fca2e4aa158e47af87440b1f464a4029.jpg",
+      "SourceId": "PhoneBook.Presentation.Razor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
+      "BasePath": "_content/PhoneBook.Presentation.Razor",
+      "RelativePath": "userprofile/images/fca2e4aa158e47af87440b1f464a4029.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\userprofile\\images\\fca2e4aa158e47af87440b1f464a4029.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\thumb\\fca2e4aa158e47af87440b1f464a4029.jpg",
+      "SourceId": "PhoneBook.Presentation.Razor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
+      "BasePath": "_content/PhoneBook.Presentation.Razor",
+      "RelativePath": "userprofile/images/thumb/fca2e4aa158e47af87440b1f464a4029.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\userprofile\\images\\thumb\\fca2e4aa158e47af87440b1f464a4029.jpg"
     }
   ]
 }

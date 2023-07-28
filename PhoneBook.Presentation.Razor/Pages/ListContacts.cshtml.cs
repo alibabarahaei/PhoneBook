@@ -63,5 +63,44 @@ namespace PhoneBook.Presentation.Razor.Pages
             return RedirectToPage();
         }
 
+
+
+
+
+
+
+
+        public async Task<IActionResult> OnGetRemoveContact(long contactId)
+        {
+
+            if (User.Identity.IsAuthenticated)
+            {
+                var user =await _userService.GetUserAsync(new GetUserDTO()
+                {
+                    User = User
+                });
+                var result = await _contactService.DeleteContactAsync(new DeleteContactDTO()
+                {
+                    User = user,
+                    ContactId = contactId
+                });
+                if (result == ContactResult.Success)
+                {
+                    TempData["SuccessMessage"] = "مخاطب مورد نظر حذف شد";
+                }
+                else if(result==ContactResult.Error)
+                {
+                    TempData["WarningMessage"] = "حذف با موفقیت انجام نشد";
+                }
+                return RedirectToPage("ListContacts");
+            }
+
+            TempData["WarningMessage"] = "در سایت ورود کنید";
+            return RedirectToPage();
+
+        }
+
+
+
     }
 }

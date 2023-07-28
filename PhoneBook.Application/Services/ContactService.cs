@@ -41,16 +41,6 @@ namespace PhoneBook.Application.Services
 
 
 
-        #region dispose
-
-
-        public async ValueTask DisposeAsync()
-        {
-            //  await _contactManager.DisposeAsync()
-        }
-
-        #endregion
-
         public async Task<ContactResult> AddContactAsync(AddContactDTO addContactDTO)
         {
             var imageName = Guid.NewGuid().ToString("N") + Path.GetExtension(addContactDTO.ContactImage.FileName);
@@ -81,7 +71,15 @@ namespace PhoneBook.Application.Services
 
         public async Task<ContactResult> DeleteContactAsync(DeleteContactDTO deleteContactDTO)
         {
-            throw new NotImplementedException();
+            var contact = await _contactRepository.GetEntityById(deleteContactDTO.ContactId);
+            if (contact != null && contact.User.Id == deleteContactDTO.User.Id)
+            {
+                 _contactRepository.DeletePermanent(contact);
+                await _contactRepository.SaveChanges();
+                 return ContactResult.Success;
+            }
+
+            return ContactResult.Error;
         }
 
         public async Task<ContactResult> EditContactAsync(EditContactDTO editContactDTO)
@@ -102,7 +100,7 @@ namespace PhoneBook.Application.Services
             currentcontact.PhoneNumber = editContactDTO.PhoneNumber;
             currentcontact.Gender=editContactDTO.Gender;
             _contactRepository.EditEntity(currentcontact);
-            _contactRepository.SaveChanges();
+            await _contactRepository.SaveChanges();
             return ContactResult.Success;
 
         }
@@ -157,5 +155,17 @@ namespace PhoneBook.Application.Services
                 return null;
             }
         }
+
+
+
+        #region dispose
+
+
+        public async ValueTask DisposeAsync()
+        {
+            //  await _contactManager.DisposeAsync()
+        }
+
+        #endregion
     }
 }

@@ -99,7 +99,7 @@
                                             <a class="info p-0 " data-original-title="" title="">
                                                 <i class="fas fa-phone font-medium-3 mr-5"></i>
                                             </a>
-                                            <a class="danger p-0" data-original-title="" title="">
+                        <a class="danger p-0" data-original-title="" title="" asp-page="ListContacts" asp-page-handler="RemoveContact" asp-route-contactid="@item.Row.Id">
                                                 <i class="fas fa-trash-alt font-medium-3 mr-5"></i>
                                             </a>
                                         </td>
