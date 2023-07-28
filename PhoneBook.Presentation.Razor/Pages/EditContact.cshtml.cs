@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PhoneBook.Application.DTOs.Contact;
 using PhoneBook.Application.DTOs.User;
@@ -10,6 +11,7 @@ using System.Xml.Linq;
 
 namespace PhoneBook.Presentation.Razor.Pages
 {
+    [Authorize]
     [BindProperties]
     public class EditContactModel : PageModel
     {
@@ -35,10 +37,11 @@ namespace PhoneBook.Presentation.Razor.Pages
         public string PhoneNumber { get; set; }
 
         [Display(Name = "جنسیت")]
-        public char Gender { get; set; }
+        public char? Gender { get; set; }
 
 
         [Display(Name = "تصویر مخاطب")]
+        
         public IFormFile? ProfileImage { get; set; }
 
         public long ContactId { get; set; }
@@ -96,6 +99,7 @@ namespace PhoneBook.Presentation.Razor.Pages
                 LastName=contact.LastName;
                 PhoneNumber = contact.PhoneNumber;
                 PathContactImage = contact.PathContactImage;
+                Gender = contact.Gender;
                 return Page();
             }
             TempData["WarningMessage"] = "در سایت ورود کنید";
@@ -132,7 +136,7 @@ namespace PhoneBook.Presentation.Razor.Pages
                     if (result == ContactResult.Success)
                     {
                         TempData["SuccessMessage"] = "اطلاعات شما با موفقیت تغییر کرد";
-                        return RedirectToPage();
+                        return RedirectToPage("ListContacts");
                     }
                     else
                     {
@@ -140,7 +144,7 @@ namespace PhoneBook.Presentation.Razor.Pages
                         FirstName = null;
                         LastName = null;
                         PhoneNumber = null;
-                        return Page();
+                        return RedirectToPage("ListContacts");
                     }
 
                 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PhoneBook.Application.DTOs.Contact;
 using PhoneBook.Application.DTOs.User;
@@ -8,6 +9,7 @@ using System.Xml.Linq;
 
 namespace PhoneBook.Presentation.Razor.Pages
 {
+    [Authorize]
     public class ListContactsModel : PageModel
     {
         #region properties

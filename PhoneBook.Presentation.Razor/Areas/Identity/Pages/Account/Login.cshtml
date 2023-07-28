@@ -26,7 +26,7 @@
                         <img src="img/lock.svg" alt="">
                         رمز عبور
                     </div>
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col">
                             <input class=" form-control-lg input-form-account" type="password"
                                    placeholder="رمز عبور" asp-for="Password">
@@ -64,8 +64,14 @@
                 </form>
             </div>
         </div>
-        <div class="col-md-6 col-lg-5 col-xl-4 text_align_center row-main-page row-main-page-left d-none d-md-block">
-            <p></p>
+        <div
+            class="col-md-6 col-lg-5 col-xl-4 text_align_center row-main-page row-main-page-left d-none d-md-block  " >
+            <div class="row div-link-login">
+                <div class="col">
+
+                    <a class="a-link" asp-page="Register">ثبت نام</a>
+                </div>
+            </div>
         </div>
     </div>
 

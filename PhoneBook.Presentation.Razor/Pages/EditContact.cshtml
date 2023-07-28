@@ -47,18 +47,23 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="userinput4" asp-for="Gender">جنسیت</label>
-                                <select id="userinput4" name="budget" class="form-control  border-primary" asp-for="Gender">
-                                    <option></option>
-                                    <option value='M'>آقا</option>
-                                    <option value='W'>خانم</option>
+                                <select id="userinput4"  class="form-control  border-primary" asp-for="Gender">
+                                    <option Selected="@(Model.Gender == 'U')" value='U'></option>
+                                    <option Selected="@(Model.Gender == 'M')" value='M'>آقا</option>
+                                    <option Selected="@(Model.Gender == 'W')" value='W'>خانم</option>
 
                                 </select>
                                 <span asp-validation-for="Gender" class="text-danger" style="font-size: 13px"></span>
                             </div>
                         </div>
                     </div>
-                    <img src="@(SD.ContactImagesThumb + Model.PathContactImage)"/>
+                    
+                    <div class="row my-3">
+                        <div class="col ">
 
+                            <img src="@(SD.ContactImagesThumb + Model.PathContactImage)" class="rounded-circle width-50  mx-auto d-block" alt="user image">
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-12">
                             <label>بارگزاری تصویر مخاطب</label>

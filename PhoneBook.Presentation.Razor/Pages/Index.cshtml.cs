@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace PhoneBook.Presentation.Razor.Pages
 {
@@ -21,9 +22,9 @@ namespace PhoneBook.Presentation.Razor.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public RedirectToPageResult OnGet()
         {
-
+           return RedirectToPage("ListContacts");
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hVitL++YoajBHxPpb/zLhEFi2G27EWoNgMi135fnm2A=",
+  "Hash": "RbK5DAC7LDKRUnoh5BIrvkOmp9LVGjYjRf5YrK0QdPI=",
   "Source": "PhoneBook.Presentation.Razor",
   "BasePath": "_content/PhoneBook.Presentation.Razor",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PhoneBook.Presentation.Razor.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\40160d22faf84c2f95c6e3ed9267316d.jpg",
+      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\2e162a44b22243a4861cad6deab854a9.jpg",
       "SourceId": "PhoneBook.Presentation.Razor",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
       "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "contact/images/40160d22faf84c2f95c6e3ed9267316d.jpg",
+      "RelativePath": "contact/images/thumb/2e162a44b22243a4861cad6deab854a9.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,15 +65,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\contact\\images\\40160d22faf84c2f95c6e3ed9267316d.jpg"
+      "OriginalItemSpec": "wwwroot\\contact\\images\\thumb\\2e162a44b22243a4861cad6deab854a9.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\5b88970c4afa40e88578e807e1d97ea0.jpg",
+      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\3021fbb331dc4302b280669e5374d7fd.jpg",
       "SourceId": "PhoneBook.Presentation.Razor",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
       "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "contact/images/5b88970c4afa40e88578e807e1d97ea0.jpg",
+      "RelativePath": "contact/images/thumb/3021fbb331dc4302b280669e5374d7fd.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,15 +82,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\contact\\images\\5b88970c4afa40e88578e807e1d97ea0.jpg"
+      "OriginalItemSpec": "wwwroot\\contact\\images\\thumb\\3021fbb331dc4302b280669e5374d7fd.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\6b5cf8c11d7342bd9ab83a81d3293b3c.jpg",
+      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\3b8b935b516247bdbc3636cf5063f201.jpg",
       "SourceId": "PhoneBook.Presentation.Razor",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
       "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "contact/images/6b5cf8c11d7342bd9ab83a81d3293b3c.jpg",
+      "RelativePath": "contact/images/thumb/3b8b935b516247bdbc3636cf5063f201.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,15 +99,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\contact\\images\\6b5cf8c11d7342bd9ab83a81d3293b3c.jpg"
+      "OriginalItemSpec": "wwwroot\\contact\\images\\thumb\\3b8b935b516247bdbc3636cf5063f201.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\6c1271654bee47f6bbc952a0882859b7.jpg",
+      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\3efd7a04fad249b89dc94b4c3bfbf682.jpg",
       "SourceId": "PhoneBook.Presentation.Razor",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
       "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "contact/images/6c1271654bee47f6bbc952a0882859b7.jpg",
+      "RelativePath": "contact/images/thumb/3efd7a04fad249b89dc94b4c3bfbf682.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,15 +116,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\contact\\images\\6c1271654bee47f6bbc952a0882859b7.jpg"
+      "OriginalItemSpec": "wwwroot\\contact\\images\\thumb\\3efd7a04fad249b89dc94b4c3bfbf682.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\cc223c7bb59245a083fd69be4210b76b.jpg",
+      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\4931e801ebec46f2b77e3575acb8a790.jpg",
       "SourceId": "PhoneBook.Presentation.Razor",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
       "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "contact/images/cc223c7bb59245a083fd69be4210b76b.jpg",
+      "RelativePath": "contact/images/thumb/4931e801ebec46f2b77e3575acb8a790.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,15 +133,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\contact\\images\\cc223c7bb59245a083fd69be4210b76b.jpg"
+      "OriginalItemSpec": "wwwroot\\contact\\images\\thumb\\4931e801ebec46f2b77e3575acb8a790.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\cfb694b2417f45468676aaf1260dd0b8.jpg",
+      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\57b8b421437c4dd897e3c3c32741fd29.jpg",
       "SourceId": "PhoneBook.Presentation.Razor",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
       "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "contact/images/cfb694b2417f45468676aaf1260dd0b8.jpg",
+      "RelativePath": "contact/images/thumb/57b8b421437c4dd897e3c3c32741fd29.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,15 +150,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\contact\\images\\cfb694b2417f45468676aaf1260dd0b8.jpg"
+      "OriginalItemSpec": "wwwroot\\contact\\images\\thumb\\57b8b421437c4dd897e3c3c32741fd29.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\40160d22faf84c2f95c6e3ed9267316d.jpg",
+      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\dcef8d58058349959a306e68b2eb6397.jpg",
       "SourceId": "PhoneBook.Presentation.Razor",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
       "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "contact/images/thumb/40160d22faf84c2f95c6e3ed9267316d.jpg",
+      "RelativePath": "contact/images/thumb/dcef8d58058349959a306e68b2eb6397.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,15 +167,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\contact\\images\\thumb\\40160d22faf84c2f95c6e3ed9267316d.jpg"
+      "OriginalItemSpec": "wwwroot\\contact\\images\\thumb\\dcef8d58058349959a306e68b2eb6397.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\5b88970c4afa40e88578e807e1d97ea0.jpg",
+      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\eb748cbf21764c80bf7b718496c1d814.jpg",
       "SourceId": "PhoneBook.Presentation.Razor",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
       "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "contact/images/thumb/5b88970c4afa40e88578e807e1d97ea0.jpg",
+      "RelativePath": "contact/images/thumb/eb748cbf21764c80bf7b718496c1d814.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -184,75 +184,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\contact\\images\\thumb\\5b88970c4afa40e88578e807e1d97ea0.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\6b5cf8c11d7342bd9ab83a81d3293b3c.jpg",
-      "SourceId": "PhoneBook.Presentation.Razor",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
-      "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "contact/images/thumb/6b5cf8c11d7342bd9ab83a81d3293b3c.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\contact\\images\\thumb\\6b5cf8c11d7342bd9ab83a81d3293b3c.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\6c1271654bee47f6bbc952a0882859b7.jpg",
-      "SourceId": "PhoneBook.Presentation.Razor",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
-      "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "contact/images/thumb/6c1271654bee47f6bbc952a0882859b7.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\contact\\images\\thumb\\6c1271654bee47f6bbc952a0882859b7.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\cc223c7bb59245a083fd69be4210b76b.jpg",
-      "SourceId": "PhoneBook.Presentation.Razor",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
-      "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "contact/images/thumb/cc223c7bb59245a083fd69be4210b76b.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\contact\\images\\thumb\\cc223c7bb59245a083fd69be4210b76b.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\cfb694b2417f45468676aaf1260dd0b8.jpg",
-      "SourceId": "PhoneBook.Presentation.Razor",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
-      "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "contact/images/thumb/cfb694b2417f45468676aaf1260dd0b8.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\contact\\images\\thumb\\cfb694b2417f45468676aaf1260dd0b8.jpg"
+      "OriginalItemSpec": "wwwroot\\contact\\images\\thumb\\eb748cbf21764c80bf7b718496c1d814.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\css\\account.css",
@@ -321,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\main.css"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\css\\notifications.css",
+      "SourceId": "PhoneBook.Presentation.Razor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
+      "BasePath": "_content/PhoneBook.Presentation.Razor",
+      "RelativePath": "css/notifications.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\notifications.css"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\css\\sidebar.css",
@@ -542,6 +491,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\jquery-3.2.1.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\js\\main.js",
+      "SourceId": "PhoneBook.Presentation.Razor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
+      "BasePath": "_content/PhoneBook.Presentation.Razor",
+      "RelativePath": "js/main.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\main.js"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\js\\notifications.js",
@@ -780,40 +746,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\fca2e4aa158e47af87440b1f464a4029.jpg",
-      "SourceId": "PhoneBook.Presentation.Razor",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
-      "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "userprofile/images/fca2e4aa158e47af87440b1f464a4029.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\userprofile\\images\\fca2e4aa158e47af87440b1f464a4029.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\thumb\\fca2e4aa158e47af87440b1f464a4029.jpg",
-      "SourceId": "PhoneBook.Presentation.Razor",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
-      "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "userprofile/images/thumb/fca2e4aa158e47af87440b1f464a4029.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\userprofile\\images\\thumb\\fca2e4aa158e47af87440b1f464a4029.jpg"
     }
   ]
 }

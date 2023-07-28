@@ -143,3 +143,24 @@ form .form-group {
 #images {
     color: var(--gray-dark);
 }
+
+.width-50 {
+    width: 50px !important;
+}
+
+.mr-2, .mx-2 {
+    margin-right: 0.75rem !important;
+}
+
+.float-left {
+    float: left !important;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}

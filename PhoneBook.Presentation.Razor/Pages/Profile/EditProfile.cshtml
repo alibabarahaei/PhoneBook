@@ -1,4 +1,5 @@
 ﻿@page
+@using PhoneBook.Application.Utilities
 @model PhoneBook.Presentation.Razor.Pages.Profile.EditProfileModel
 @{
 }
@@ -7,7 +8,7 @@
 <div class="card">
     <div class="card-header">
         <div class="card-title-wrap bar ">
-            <h4 class="card-title" id="basic-layout-colored-form-control">تغییز اطلاعات پروفایل</h4>
+            <h4 class="card-title" id="basic-layout-colored-form-control">تغییر اطلاعات پروفایل</h4>
         </div>
     </div>
     <div class="card-body">
@@ -46,27 +47,35 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="userinput4" asp-for="Gender">جنسیت</label>
-                                <select id="userinput4" name="budget" class="form-control  border-primary" asp-for="Gender">
-                                    <option></option>
-                                    <option selected="">این منوی انتخاب را باز کنید</option>
-                                    <option value='M'>آقا</option>
-                                    <option value='W'>خانم</option>
+                                <select id="userinput4"  class="form-control  border-primary" asp-for="Gender">
+                                    
+                                    <option Selected="@(Model.Gender == 'U')" ></option>
+                                    <option Selected="@(Model.Gender == 'M')" value='M'>آقا</option>
+                                    <option Selected="@(Model.Gender == 'W')" value='W'>خانم</option>
 
                                 </select>
                                 <span asp-validation-for="Gender" class="text-danger" style="font-size: 13px"></span>
                             </div>
                         </div>
                     </div>
-
+                    <div class="row my-3">
+                        <div class="col ">
+                            @if (@Model.PathProfileImageBefore != null)
+                            {
+                            <img src="@(SD.UserProfileThumb+@Model.PathProfileImageBefore)" class="rounded-circle width-50  mx-auto d-block" alt="user image">
+                            }
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-12">
                             <label>بارگزاری تصویر پروفایل</label>
                             <label for="images" class="drop-container" id="dropcontainer">
                                 <span class="drop-title">تصویر را رها کنید</span>
                                 یا
-                                <input type="file" id="images" accept="image/*" required asp-for="ProfileImage">
+                                <input type="file" id="images" accept="image/*"  asp-for="ProfileImage">
 
                             </label>
+                            <span asp-validation-for="ProfileImage" class="text-danger" style="font-size: 13px"></span>
                         </div>
 
                     </div>

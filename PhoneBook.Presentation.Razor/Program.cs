@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using PhoneBook.Application.InterfaceServices;
 using PhoneBook.Application.Security.Identity;
 using PhoneBook.Application.Services;
@@ -20,7 +21,12 @@ builder.Services.AddRazorPages();
 
 
 
-// Config Identity
+
+
+
+#region Config Identity
+
+
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     {
         options.Password.RequireNonAlphanumeric = false;
@@ -33,10 +39,15 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     .AddErrorDescriber<PersianIdentityErrorDescriber>();
 
 
+#endregion
 
-//Config Cookie
+
+#region ConfigCookie
+
+
 builder.Services.ConfigureApplicationCookie(options =>
 {
+   
     options.ExpireTimeSpan = TimeSpan.FromDays(10);
     options.AccessDeniedPath = "/Identity/Account/AccessDenied";
     options.Cookie.Name = "YourAppCookieName";
@@ -48,6 +59,8 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.SlidingExpiration = true;
 });
 
+#endregion
+
 
 
 
@@ -55,10 +68,14 @@ builder.Services.ConfigureApplicationCookie(options =>
 builder.Services.AddSingleton<HtmlEncoder>(HtmlEncoder.Create(allowedRanges: new[] { UnicodeRanges.BasicLatin, UnicodeRanges.Arabic }));
 
 
+#region Services
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IContactService, ContactService>();
+
+
+#endregion
 
 #region Config Database
 builder.Services.AddDbContext<PhoneBookDbContext>(option =>

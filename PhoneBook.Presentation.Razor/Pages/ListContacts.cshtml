@@ -1,5 +1,6 @@
 ﻿@page
 @using PhoneBook.Application.DTOs.Contact
+@using PhoneBook.Application.Utilities
 @model PhoneBook.Presentation.Razor.Pages.ListContactsModel
 @{
     var filtercontacts = ViewData["FilterContacts"] as FilterContactsDTO;
@@ -51,7 +52,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="userinput4">تعداد سطر</label>
-                                        <select id="userinput4" name="budget" class="form-control  border-primary" asp-for="FilterContacts.TakeEntity">
+                                        <select id="userinput4"  class="form-control  border-primary" asp-for="FilterContacts.TakeEntity">
                                             <option>5</option>
                                             <option>10</option>
                                             <option >15</option>
@@ -80,6 +81,7 @@
                                     <th>نام</th>
                                     <th>نام خانوادگی</th>
                                     <th>تماس</th>
+                <th>تصویر</th>
                                     <th>اقدامات</th>
                                 </tr>
                                 </thead>
@@ -92,6 +94,9 @@
                                         <td class="td-color">@item.Row.FirstName</td>
                                         <td class="td-color">@item.Row.LastName</td>
                                         <td class="td-color"> @item.Row.PhoneNumber</td>
+                                        <td><span class="avatar avatar-xs">
+                                            <img class="box-shadow-2" src="@(SD.ContactImagesThumb+@item.Row.PathContactImage)" alt="avatar">
+                                        </span></td>
                                         <td>
                                             <a class="success p-0" data-original-title="" title="" asp-page="EditContact" asp-route-contactid="@item.Row.Id">
                                                 <i class="fa fa-pencil font-medium-3 mr-5"></i>

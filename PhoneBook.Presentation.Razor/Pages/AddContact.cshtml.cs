@@ -5,11 +5,12 @@ using PhoneBook.Application.InterfaceServices;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 using PhoneBook.Application.DTOs.Contact;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PhoneBook.Presentation.Razor.Pages
 {
 
-
+    [Authorize]
     [BindProperties]
     public class AddContactModel : PageModel
     {
@@ -36,10 +37,12 @@ namespace PhoneBook.Presentation.Razor.Pages
         public string PhoneNumber { get; set; }
 
         [Display(Name = "جنسیت")]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         public char Gender { get; set; }
 
 
         [Display(Name = "تصویر پروفایل")]
+        [Required(ErrorMessage = "لطفا {0} را آپلود کنید")]
         public IFormFile ProfileImage { get; set; }
 
         #endregion
@@ -99,7 +102,7 @@ namespace PhoneBook.Presentation.Razor.Pages
                     if (result == ContactResult.Success)
                     {
                         TempData["SuccessMessage"] = "اطلاعات شما با موفقیت تغییر کرد";
-                        return RedirectToPage();
+                        return RedirectToPage("ListContacts");
                     }
                     else
                     {
@@ -107,13 +110,13 @@ namespace PhoneBook.Presentation.Razor.Pages
                         FirstName = null;
                         LastName = null;
                         PhoneNumber = null;
-                        return Page();
+                        return RedirectToPage("ListContacts");
                     }
 
                 }
 
                 TempData["WarningMessage"] = "در سایت ورود کنید";
-                return Page();
+                return RedirectToPage();
             }
 
             return Page();
