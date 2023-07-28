@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using PhoneBook.Application.DTOs.Contact;
+using PhoneBook.Application.DTOs.Paging;
 using PhoneBook.Application.DTOs.User;
 using PhoneBook.Application.Extensions;
 using PhoneBook.Application.InterfaceServices;
@@ -105,10 +107,35 @@ namespace PhoneBook.Application.Services
 
         }
 
-        public Task<FilterContactsDTO> FilterContactsAsync(FilterContactsDTO contactsDTO)
+        public async Task<FilterContactsDTO> FilterContactsAsync(FilterContactsDTO filterontactsDTO)
         {
-            throw new NotImplementedException();
+            var query = _contactRepository.GetQuery().AsQueryable();
+
+
+            query = query.Where(c => c.User.UserName == filterontactsDTO.User.UserName);
+
+
+            #region filter
+
+            if (!string.IsNullOrEmpty(filterontactsDTO.FirstName))
+                query = query.Where(s => EF.Functions.Like(s.FirstName, $"%{filterontactsDTO.FirstName}%"));
+
+            if (!string.IsNullOrEmpty(filterontactsDTO.LastName))
+                query = query.Where(s => EF.Functions.Like(s.LastName, $"%{filterontactsDTO.LastName}%"));
+            if (!string.IsNullOrEmpty(filterontactsDTO.PhoneNumber))
+                query = query.Where(s => EF.Functions.Like(s.PhoneNumber, $"%{filterontactsDTO.PhoneNumber}%"));
+            #endregion
+
+            #region paging
+
+            var pager = Pager.Build(filterontactsDTO.PageId, await query.CountAsync(), filterontactsDTO.TakeEntity, filterontactsDTO.HowManyShowPageAfterAndBefore);
+            var allEntities = await query.Paging(pager).ToListAsync();
+
+            #endregion
+
+            return filterontactsDTO.SetProducts(allEntities).SetPaging(pager);
         }
+    
 
         public async Task<EditContactDTO> GetContactByIdAsync(GetContactByIdDTO getContactByIdDTO)
         {

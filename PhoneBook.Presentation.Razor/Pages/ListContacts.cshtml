@@ -1,0 +1,135 @@
+﻿@page
+@using PhoneBook.Application.DTOs.Contact
+@model PhoneBook.Presentation.Razor.Pages.ListContactsModel
+@{
+    var filtercontacts = ViewData["FilterContacts"] as FilterContactsDTO;
+}
+
+
+
+
+
+<form class="form" method="Get" id="filter-form" asp-page="ListContacts">
+    
+    <input type="hidden" asp-for="FilterContacts.PageId" id="PageId" />
+    <section id="extended">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-table">
+                    <div class="card-header">
+                        <div class="card-title-wrap bar-table">
+                            <h4 class="card-title">دفترچه تلفن</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-body ">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="userinput1">نام</label>
+                                        <input type="text" id="userinput1" class="form-control border-primary" asp-for="FilterContacts.FirstName">
+                                        <span asp-validation-for="FilterContacts.FirstName" class="text-danger" style="font-size: 13px"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="userinput2">نام خانوادگی</label>
+                                        <input type="text" id="userinput2" class="form-control border-primary" asp-for="FilterContacts.LastName">
+                                        <span asp-validation-for="FilterContacts.LastName" class="text-danger" style="font-size: 13px"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="userinput3">موبایل</label>
+                                        <input type="text" id="userinput3" class="form-control border-primary" asp-for="FilterContacts.PhoneNumber">
+                                        <span asp-validation-for="FilterContacts.PhoneNumber" class="text-danger" style="font-size: 13px"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="userinput4">تعداد سطر</label>
+                                        <select id="userinput4" name="budget" class="form-control  border-primary" asp-for="FilterContacts.TakeEntity">
+                                            <option>5</option>
+                                            <option>10</option>
+                                            <option >15</option>
+                                            <option >20</option>
+                                        </select>
+                                        <span asp-validation-for="FilterContacts.TakeEntity" class="text-danger" style="font-size: 13px"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+</form>
+
+
+
+
+
+                        <div class="card-block">
+                            <table class="table table-responsive-md text-center">
+                                <thead>
+                                <tr class="tr-table">
+                                    <th>#</th>
+                                    <th>نام</th>
+                                    <th>نام خانوادگی</th>
+                                    <th>تماس</th>
+                                    <th>اقدامات</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach (var item in filtercontacts.Contacts.Select((r, i) => new {Row = r, Index = i}))
+                                {
+
+                                    <tr>
+                                        <td class="td-color">@(item.Index+1)</td>
+                                        <td class="td-color">@item.Row.FirstName</td>
+                                        <td class="td-color">@item.Row.LastName</td>
+                                        <td class="td-color"> @item.Row.PhoneNumber</td>
+                                        <td>
+                                            <a class="success p-0" data-original-title="" title="" asp-page="EditContact" asp-route-contactid="@item.Row.Id">
+                                                <i class="fa fa-pencil font-medium-3 mr-5"></i>
+                                            </a>
+                                            <a class="info p-0 " data-original-title="" title="">
+                                                <i class="fas fa-phone font-medium-3 mr-5"></i>
+                                            </a>
+                                            <a class="danger p-0" data-original-title="" title="">
+                                                <i class="fas fa-trash-alt font-medium-3 mr-5"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+
+                                </tbody>
+                            </table>
+                            <div class="form-actions left mt-5">
+
+                                <button type="submit" class="btn" style="background-color: #CE5776; color: white;">
+                                    <i class="bi bi-search"></i> جست و جو
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row justify-content-center  my-4">
+            @if (filtercontacts != null && filtercontacts.Contacts.Any())
+            {
+                <partial name="Shared/_PagingPartial" model="@filtercontacts.GetCurrentPaging()"/>
+
+            }
+
+        </div>
+    </section>
+
+
+

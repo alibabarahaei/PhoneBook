@@ -1,0 +1,45 @@
+﻿@model PhoneBook.Application.DTOs.Paging.BasePaging
+
+
+
+
+
+
+
+<div class="col-auto align-self-center dataTables_paginate paging_simple_numbers"
+     id="DataTables_Table_0_paginate">
+    <ul class="pagination">
+        @if (Model.StartPage < Model.PageId)
+        {
+        <li class="paginate_button page-item previous "
+            id="DataTables_Table_0_previous">
+                <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" onclick="FillPageId(@(Model.PageId - 1))"
+               data-dt-idx="0" tabindex="0" class="page-link">قبلی</a>
+        </li>
+            
+        }
+        @for (int i = Model.StartPage; i <= Model.EndPage; i++)
+        {
+            <li class="paginate_button page-item @(Model.PageId == i ? "active":"")">
+                <a href="#" onclick="FillPageId(@i)" data-dt-idx="@i"
+                   aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0"
+                   class="page-link">@i</a>
+            </li>
+        }
+        @if (Model.EndPage > Model.PageId)
+        {
+            <li class="paginate_button page-item next" id="DataTables_Table_0_next">
+                <a href="#" onclick="FillPageId(@(Model.PageId + 1))"
+                   aria-controls="DataTables_Table_0" data-dt-idx="7" tabindex="0"
+                   class="page-link">بعدی</a>
+            </li>
+        }
+      
+        
+    </ul>
+</div>
+
+
+
+
+

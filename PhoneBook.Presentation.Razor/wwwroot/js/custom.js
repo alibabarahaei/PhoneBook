@@ -10,3 +10,9 @@
         message: decodeURI(text)
     });
 }
+
+function FillPageId(pageId) {
+    $('#PageId').val(pageId);
+    console.log("sghl");
+    $('#filter-form').submit();
+}

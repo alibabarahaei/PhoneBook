@@ -17,7 +17,7 @@ namespace PhoneBook.Application.InterfaceServices
         Task<ContactResult> AddContactAsync(AddContactDTO addContactDTO);
         Task<ContactResult> DeleteContactAsync(DeleteContactDTO deleteContactDTO);
         Task<ContactResult> EditContactAsync(EditContactDTO editContactDTO);
-        Task<FilterContactsDTO> FilterContactsAsync(FilterContactsDTO contactsDTO);
+        Task<FilterContactsDTO> FilterContactsAsync(FilterContactsDTO filtercontactsDTO);
         Task<EditContactDTO> GetContactByIdAsync(GetContactByIdDTO getContactByIdDTO);
 
     }
