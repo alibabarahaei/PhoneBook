@@ -24,14 +24,16 @@ namespace PhoneBook.Application.Services
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly IMessageSender _messageSender;
+        private static Random rnd = new Random();
         
 
-        public UserService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<ApplicationUser> signInManager)
+        public UserService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<ApplicationUser> signInManager, IMessageSender messageSender)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _signInManager = signInManager;
-           
+           _messageSender = messageSender;
         }
         #endregion
 
@@ -57,8 +59,16 @@ namespace PhoneBook.Application.Services
                 
             };
 
-            return await _userManager.CreateAsync(user, registerUserDTO.Password);
 
+            var IdentityResult= await _userManager.CreateAsync(user, registerUserDTO.Password);
+            if (IdentityResult.Succeeded)
+            {
+
+            var emailConfirmationNumber = rnd.Next(10000, 100000);
+            _messageSender.SendEmail(registerUserDTO.Email, "تاییدیه ایمیل", $"code : {emailConfirmationNumber}");
+
+            }
+            return IdentityResult;
 
         }
 

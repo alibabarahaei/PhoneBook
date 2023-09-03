@@ -157,6 +157,10 @@
       "PackagePath": "staticwebassets\\images\\a.png"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\images\\envelope.svg",
+      "PackagePath": "staticwebassets\\images\\envelope.svg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\images\\facebook.svg",
       "PackagePath": "staticwebassets\\images\\facebook.svg"
     },

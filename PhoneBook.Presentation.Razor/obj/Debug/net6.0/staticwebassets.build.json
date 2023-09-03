@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+npDT5K+5AHyejHZx+7j8oZAG+IqRmktKwu1sIUCqWY=",
+  "Hash": "uiNQk9mvLITJ+y19GFDJ7XhPP1UWZX4Bfz8o+ggvE3I=",
   "Source": "PhoneBook.Presentation.Razor",
   "BasePath": "_content/PhoneBook.Presentation.Razor",
   "Mode": "Default",
@@ -695,6 +695,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\a.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\images\\envelope.svg",
+      "SourceId": "PhoneBook.Presentation.Razor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
+      "BasePath": "_content/PhoneBook.Presentation.Razor",
+      "RelativePath": "images/envelope.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\envelope.svg"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\images\\facebook.svg",

@@ -39,13 +39,12 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
         #region constuctor
 
         private readonly IUserService _userService;
-        
+        private readonly IMessageSender _messageSender;
 
-        public LoginModel(IUserService userService)
+        public LoginModel(IUserService userService, IMessageSender messageSender)
         {
-
             _userService = userService;
-           
+            _messageSender = messageSender;
         }
 
         #endregion
@@ -58,6 +57,7 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
 
         public void OnGet()
         {
+            
         }
 
 

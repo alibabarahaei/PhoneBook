@@ -93,7 +93,7 @@ builder.Services.AddSingleton<HtmlEncoder>(HtmlEncoder.Create(allowedRanges: new
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IContactService, ContactService>();
-
+builder.Services.AddScoped<IMessageSender, MessageSender>();
 
 #endregion
 

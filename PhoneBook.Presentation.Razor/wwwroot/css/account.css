@@ -28,12 +28,12 @@ body {
 }
 
 .row-main-page-left-register {
-    height: 510px;
+    height: 615px;
     background-image: linear-gradient(to left bottom, var(--pink-lighter), var(--pink-light), var(--pink-middle), var(--pink-dark), var(--pink-darker));
 }
 
 .row-main-page-right-register {
-    height: 510px;
+    height: 615px;
     background-color: var(--white-lighter);
     padding: 24px;
 }
@@ -146,12 +146,17 @@ a>i {
     margin-top: 235px;
 }
 .div-link-register {
-    margin-top: 200px;
+    margin-top: 260px;
 }
 
-
-
-
+/* webkit solution */
+::-webkit-input-placeholder {
+    text-align: right;
+}
+/* mozilla solution */
+input:-moz-placeholder {
+    text-align: right;
+}
 
 .btn-email{
     width:85px
