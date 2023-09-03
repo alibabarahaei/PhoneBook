@@ -11,8 +11,28 @@ using PhoneBook.Infrastructure.EFCore.Context;
 using PhoneBook.Infrastructure.EFCore.Repository.Base;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
+using Westwind.AspNetCore.LiveReload;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+
+
+
+#region AddLiveReload
+
+
+
+builder.Services.AddLiveReload(config =>
+{
+    // optional - use config instead
+    //config.LiveReloadEnabled = true;
+    //config.FolderToMonitor = Path.GetFullname(Path.Combine(Env.ContentRootPath,"..")) ;
+});
+
+
+#endregion
+
 
 // Add services to the container.
 builder.Services.AddRazorPages();
@@ -93,6 +113,8 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+app.UseLiveReload();
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

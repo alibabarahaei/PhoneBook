@@ -1,0 +1,277 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PhoneBook.Presentation.Razor.bundle.scp.css",
+      "PackagePath": "staticwebassets\\PhoneBook.Presentation.Razor.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\1825789266ba4c16923a75ec734a460e.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\1825789266ba4c16923a75ec734a460e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\6d90d07e821c4be8a20da8c4d3691630.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\6d90d07e821c4be8a20da8c4d3691630.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\7ff9b49f9b88468690ba83e028356a70.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\7ff9b49f9b88468690ba83e028356a70.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\89c0ec4a88d54074826a8b83b57ccb6b.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\89c0ec4a88d54074826a8b83b57ccb6b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\9995dc0cdcc2434c85ad9a42134fda79.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\9995dc0cdcc2434c85ad9a42134fda79.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\ab68357a32a04352bfd4d19553f52c5b.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\ab68357a32a04352bfd4d19553f52c5b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\c42a068614844460a67da76c92e3707e.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\c42a068614844460a67da76c92e3707e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\f0402539dfe14205b18be3caf6523a4f.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\f0402539dfe14205b18be3caf6523a4f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\f86edc646461401b928ca45128ee319c.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\f86edc646461401b928ca45128ee319c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\ff3fd7662e18455faff9d9162ca7a6ab.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\ff3fd7662e18455faff9d9162ca7a6ab.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\1825789266ba4c16923a75ec734a460e.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\1825789266ba4c16923a75ec734a460e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\2e162a44b22243a4861cad6deab854a9.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\2e162a44b22243a4861cad6deab854a9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\3021fbb331dc4302b280669e5374d7fd.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\3021fbb331dc4302b280669e5374d7fd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\3b8b935b516247bdbc3636cf5063f201.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\3b8b935b516247bdbc3636cf5063f201.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\3efd7a04fad249b89dc94b4c3bfbf682.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\3efd7a04fad249b89dc94b4c3bfbf682.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\4931e801ebec46f2b77e3575acb8a790.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\4931e801ebec46f2b77e3575acb8a790.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\57b8b421437c4dd897e3c3c32741fd29.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\57b8b421437c4dd897e3c3c32741fd29.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\6d90d07e821c4be8a20da8c4d3691630.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\6d90d07e821c4be8a20da8c4d3691630.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\7ff9b49f9b88468690ba83e028356a70.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\7ff9b49f9b88468690ba83e028356a70.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\89c0ec4a88d54074826a8b83b57ccb6b.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\89c0ec4a88d54074826a8b83b57ccb6b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\9995dc0cdcc2434c85ad9a42134fda79.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\9995dc0cdcc2434c85ad9a42134fda79.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\ab68357a32a04352bfd4d19553f52c5b.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\ab68357a32a04352bfd4d19553f52c5b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\c42a068614844460a67da76c92e3707e.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\c42a068614844460a67da76c92e3707e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\dcef8d58058349959a306e68b2eb6397.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\dcef8d58058349959a306e68b2eb6397.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\eb748cbf21764c80bf7b718496c1d814.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\eb748cbf21764c80bf7b718496c1d814.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\f0402539dfe14205b18be3caf6523a4f.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\f0402539dfe14205b18be3caf6523a4f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\f86edc646461401b928ca45128ee319c.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\f86edc646461401b928ca45128ee319c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\ff3fd7662e18455faff9d9162ca7a6ab.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\ff3fd7662e18455faff9d9162ca7a6ab.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\css\\account.css",
+      "PackagePath": "staticwebassets\\css\\account.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\css\\form.css",
+      "PackagePath": "staticwebassets\\css\\form.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\css\\notifications.css",
+      "PackagePath": "staticwebassets\\css\\notifications.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\css\\sidebar.css",
+      "PackagePath": "staticwebassets\\css\\sidebar.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\fonts\\IRANSansWeb.ttf",
+      "PackagePath": "staticwebassets\\fonts\\IRANSansWeb.ttf"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\fonts\\Sans a4fran3.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Sans a4fran3.ttf"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\images\\a.png",
+      "PackagePath": "staticwebassets\\images\\a.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\images\\facebook.svg",
+      "PackagePath": "staticwebassets\\images\\facebook.svg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\images\\google.svg",
+      "PackagePath": "staticwebassets\\images\\google.svg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\images\\lock.svg",
+      "PackagePath": "staticwebassets\\images\\lock.svg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\images\\people.svg",
+      "PackagePath": "staticwebassets\\images\\people.svg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\images\\twitter.svg",
+      "PackagePath": "staticwebassets\\images\\twitter.svg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\js\\custom.js",
+      "PackagePath": "staticwebassets\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\js\\jquery-3.2.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.2.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\js\\notifications.js",
+      "PackagePath": "staticwebassets\\js\\notifications.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\js\\sidebar.js",
+      "PackagePath": "staticwebassets\\js\\sidebar.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\f718e4b95e9c41359a57af84372365e8.jpg",
+      "PackagePath": "staticwebassets\\userprofile\\images\\f718e4b95e9c41359a57af84372365e8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\thumb\\f718e4b95e9c41359a57af84372365e8.jpg",
+      "PackagePath": "staticwebassets\\userprofile\\images\\thumb\\f718e4b95e9c41359a57af84372365e8.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.PhoneBook.Presentation.Razor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.PhoneBook.Presentation.Razor.props",
+      "PackagePath": "build\\PhoneBook.Presentation.Razor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.PhoneBook.Presentation.Razor.props",
+      "PackagePath": "buildMultiTargeting\\PhoneBook.Presentation.Razor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.PhoneBook.Presentation.Razor.props",
+      "PackagePath": "buildTransitive\\PhoneBook.Presentation.Razor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -32,3 +32,20 @@ C:\Users\user\Desktop\New folder (5)\PhoneBook\PhoneBook.Infrastructure.EFCore\o
 C:\Users\user\Desktop\New folder (5)\PhoneBook\PhoneBook.Infrastructure.EFCore\obj\Debug\net6.0\PhoneBook.Infrastructure.EFCore.pdb
 C:\Users\user\Desktop\New folder (5)\PhoneBook\PhoneBook.Infrastructure.EFCore\obj\Debug\net6.0\PhoneBook.Infrastructure.EFCore.genruntimeconfig.cache
 C:\Users\user\Desktop\New folder (5)\PhoneBook\PhoneBook.Infrastructure.EFCore\obj\Debug\net6.0\ref\PhoneBook.Infrastructure.EFCore.dll
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\bin\Debug\net6.0\PhoneBook.Infrastructure.EFCore.deps.json
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\bin\Debug\net6.0\PhoneBook.Infrastructure.EFCore.runtimeconfig.json
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\bin\Debug\net6.0\PhoneBook.Infrastructure.EFCore.dll
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\bin\Debug\net6.0\PhoneBook.Infrastructure.EFCore.pdb
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\bin\Debug\net6.0\PhoneBook.Domain.dll
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\bin\Debug\net6.0\PhoneBook.Domain.pdb
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\obj\Debug\net6.0\PhoneBook.Infrastructure.EFCore.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\obj\Debug\net6.0\PhoneBook.Infrastructure.EFCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\obj\Debug\net6.0\PhoneBook.Infrastructure.EFCore.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\obj\Debug\net6.0\PhoneBook.Infrastructure.EFCore.AssemblyInfo.cs
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\obj\Debug\net6.0\PhoneBook.Infrastructure.EFCore.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\obj\Debug\net6.0\PhoneBook.Infrastructure.EFCore.csproj.CopyComplete
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\obj\Debug\net6.0\PhoneBook.Infrastructure.EFCore.dll
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\obj\Debug\net6.0\refint\PhoneBook.Infrastructure.EFCore.dll
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\obj\Debug\net6.0\PhoneBook.Infrastructure.EFCore.pdb
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\obj\Debug\net6.0\PhoneBook.Infrastructure.EFCore.genruntimeconfig.cache
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Infrastructure.EFCore\obj\Debug\net6.0\ref\PhoneBook.Infrastructure.EFCore.dll

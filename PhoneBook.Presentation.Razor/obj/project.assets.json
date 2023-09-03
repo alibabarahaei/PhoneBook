@@ -1268,6 +1268,22 @@
           }
         }
       },
+      "Westwind.AspNetCore.LiveReload/0.4.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Westwind.AspNetCore.LiveReload.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Westwind.AspNetCore.LiveReload.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "PhoneBook.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2974,6 +2990,25 @@
         "version.txt"
       ]
     },
+    "Westwind.AspNetCore.LiveReload/0.4.2": {
+      "sha512": "4XxEwqxeOLDTnDlEmBYu7jfepHbr0wINgROGI5qnWvxx5gZcawphba7t2mswJLZ/XMQwtxEfJ/SRI+d/BSzETg==",
+      "type": "package",
+      "path": "westwind.aspnetcore.livereload/0.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.MD",
+        "icon.png",
+        "lib/net6.0/Westwind.AspNetCore.LiveReload.dll",
+        "lib/net6.0/Westwind.AspNetCore.LiveReload.xml",
+        "lib/net7.0/Westwind.AspNetCore.LiveReload.dll",
+        "lib/net7.0/Westwind.AspNetCore.LiveReload.xml",
+        "lib/netcoreapp3.1/Westwind.AspNetCore.LiveReload.dll",
+        "lib/netcoreapp3.1/Westwind.AspNetCore.LiveReload.xml",
+        "westwind.aspnetcore.livereload.0.4.2.nupkg.sha512",
+        "westwind.aspnetcore.livereload.nuspec"
+      ]
+    },
     "PhoneBook.Application/1.0.0": {
       "type": "project",
       "path": "../PhoneBook.Application/PhoneBook.Application.csproj",
@@ -2994,7 +3029,8 @@
     "net6.0": [
       "Microsoft.EntityFrameworkCore.Design >= 6.0.8",
       "PhoneBook.Application >= 1.0.0",
-      "PhoneBook.Infrastructure.EFCore >= 1.0.0"
+      "PhoneBook.Infrastructure.EFCore >= 1.0.0",
+      "Westwind.AspNetCore.LiveReload >= 0.4.2"
     ]
   },
   "packageFolders": {
@@ -3004,11 +3040,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\PhoneBook.Presentation.Razor.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\PhoneBook.Presentation.Razor.csproj",
       "projectName": "PhoneBook.Presentation.Razor",
-      "projectPath": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\PhoneBook.Presentation.Razor.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\PhoneBook.Presentation.Razor.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Presentation.Razor\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3023,17 +3059,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Application\\PhoneBook.Application.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Application\\PhoneBook.Application.csproj"
+            "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Application\\PhoneBook.Application.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Application\\PhoneBook.Application.csproj"
             },
-            "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Infrastructure.EFCore\\PhoneBook.Infrastructure.EFCore.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\New folder (5)\\PhoneBook\\PhoneBook.Infrastructure.EFCore\\PhoneBook.Infrastructure.EFCore.csproj"
+            "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Infrastructure.EFCore\\PhoneBook.Infrastructure.EFCore.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Infrastructure.EFCore\\PhoneBook.Infrastructure.EFCore.csproj"
             }
           }
         }
@@ -3053,6 +3090,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.8, )"
+          },
+          "Westwind.AspNetCore.LiveReload": {
+            "target": "Package",
+            "version": "[0.4.2, )"
           }
         },
         "imports": [
@@ -3074,7 +3115,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

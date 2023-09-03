@@ -10,7 +10,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "6.0.8",
           "PhoneBook.Application": "1.0.0",
-          "PhoneBook.Infrastructure.EFCore": "1.0.0"
+          "PhoneBook.Infrastructure.EFCore": "1.0.0",
+          "Westwind.AspNetCore.LiveReload": "0.4.2"
         },
         "runtime": {
           "PhoneBook.Presentation.Razor.dll": {}
@@ -632,6 +633,14 @@
           }
         }
       },
+      "Westwind.AspNetCore.LiveReload/0.4.2": {
+        "runtime": {
+          "lib/net6.0/Westwind.AspNetCore.LiveReload.dll": {
+            "assemblyVersion": "0.4.2.0",
+            "fileVersion": "0.4.2.0"
+          }
+        }
+      },
       "PhoneBook.Application/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity": "2.2.0",
@@ -1167,6 +1176,13 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "Westwind.AspNetCore.LiveReload/0.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4XxEwqxeOLDTnDlEmBYu7jfepHbr0wINgROGI5qnWvxx5gZcawphba7t2mswJLZ/XMQwtxEfJ/SRI+d/BSzETg==",
+      "path": "westwind.aspnetcore.livereload/0.4.2",
+      "hashPath": "westwind.aspnetcore.livereload.0.4.2.nupkg.sha512"
     },
     "PhoneBook.Application/1.0.0": {
       "type": "project",
