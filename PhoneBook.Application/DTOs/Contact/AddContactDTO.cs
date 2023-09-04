@@ -12,7 +12,7 @@ namespace PhoneBook.Application.DTOs.Contact
 {
     public class AddContactDTO
     {
-        public ApplicationUser User { get; set; }
+        public string UserId { get; set; }
 
         public string FirstName { get; set; }
 

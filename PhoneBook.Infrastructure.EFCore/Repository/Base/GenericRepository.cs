@@ -37,6 +37,7 @@ namespace PhoneBook.Infrastructure.EFCore.Repository.Base
 
         public async Task<TEntity> GetEntityById(long entityId)
         {
+          
             return await _dbSet.SingleOrDefaultAsync(t => t.Id == entityId);
         }
 

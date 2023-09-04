@@ -36,7 +36,7 @@ namespace PhoneBook.Presentation.Razor.Pages.ViewModels
 
         [Display(Name = "تصویر پروفایل")]
         [Required(ErrorMessage = "لطفا {0} را آپلود کنید")]
-        public IFormFile ProfileImage { get; set; }
+        public IFormFile ContactImage { get; set; }
 
 
 

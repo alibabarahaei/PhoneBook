@@ -9,6 +9,8 @@ using PhoneBook.Domain.Models.Contacts;
 using PhoneBook.Presentation.Razor.Pages.ViewModels;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
+using AutoMapper;
+using PhoneBook.Presentation.Razor.Extensions;
 
 namespace PhoneBook.Presentation.Razor.Pages
 {
@@ -26,15 +28,14 @@ namespace PhoneBook.Presentation.Razor.Pages
 
         private readonly IUserService _userService;
         private readonly IContactService _contactService;
+        private readonly IMapper _mapper;
 
-        public EditContactModel(IUserService userService, IContactService contactService)
+        public EditContactModel(IUserService userService, IContactService contactService, IMapper mapper)
         {
-
             _userService = userService;
             _contactService = contactService;
-
+            _mapper = mapper;
         }
-
 
         #endregion
 
@@ -52,26 +53,19 @@ namespace PhoneBook.Presentation.Razor.Pages
 
             if (User.Identity.IsAuthenticated)
             {
-                var user = await _userService.GetUserAsync((new GetUserDTO()
-                {
-                    User = User
-                }));
+               
                 var contact = await _contactService.GetContactByIdAsync(new GetContactByIdDTO()
                 {
-                    User = user,
+                    UserId = User.GetUserId(),
                     ContactId = contactid
                 });
                 if (contact == null)
                 {
-                    return RedirectToPage();
+                    TempData["WarningMessage"] = "همچین مخاطبی یافت نشد";
+                    return RedirectToPage("ListContacts");
                 }
 
-                EditContactViewModel.ContactId = contactid;
-                EditContactViewModel.FirstName = contact.FirstName;
-                EditContactViewModel.LastName = contact.LastName;
-                EditContactViewModel.PhoneNumber = contact.PhoneNumber;
-                EditContactViewModel.PathContactImage = contact.PathContactImage;
-                EditContactViewModel.Gender = contact.Gender;
+                EditContactViewModel=_mapper.Map<EditContactViewModel>(contact);
                 return Page();
             }
             TempData["WarningMessage"] = "در سایت ورود کنید";
@@ -82,18 +76,10 @@ namespace PhoneBook.Presentation.Razor.Pages
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> OnPost()
         {
-
-
-
             if (ModelState.IsValid)
             {
                 if (User.Identity.IsAuthenticated)
                 {
-                    var user = await _userService.GetUserAsync(new GetUserDTO()
-                    {
-                        User = User
-                    });
-
                     var editConatct = new EditContactDTO()
                     {
                         ContactId = EditContactViewModel.ContactId,
@@ -101,7 +87,7 @@ namespace PhoneBook.Presentation.Razor.Pages
                         LastName = EditContactViewModel.LastName,
                         PhoneNumber = EditContactViewModel.PhoneNumber,
                         Gender = EditContactViewModel.Gender,
-                        ContactImage = EditContactViewModel.ProfileImage
+                        ContactImage = EditContactViewModel.ContactImage
                     };
                     var result = await _contactService.EditContactAsync(editConatct);
 
@@ -118,13 +104,10 @@ namespace PhoneBook.Presentation.Razor.Pages
                         EditContactViewModel.PhoneNumber = null;
                         return RedirectToPage("ListContacts");
                     }
-
                 }
-
                 TempData["WarningMessage"] = "در سایت ورود کنید";
                 return Page();
             }
-
             return Page();
 
 

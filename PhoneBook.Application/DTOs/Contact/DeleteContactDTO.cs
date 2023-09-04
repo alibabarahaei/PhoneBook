@@ -11,7 +11,7 @@ namespace PhoneBook.Application.DTOs.Contact
     {
         public long ContactId { get; set; }
 
-        public ApplicationUser User { get; set; }
+        public string UserId { get; set; }
     }
    
 }

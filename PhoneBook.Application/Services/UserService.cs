@@ -50,6 +50,7 @@ namespace PhoneBook.Application.Services
 
         public async Task<IdentityResult> RegisterUserAsync(RegisterUserDTO registerUserDTO)
         {
+            
             var user = new ApplicationUser()
             {
                 UserName = registerUserDTO.UserName,
@@ -116,17 +117,31 @@ namespace PhoneBook.Application.Services
             return await _userManager.UpdateAsync(currentUser);
         }
 
-        public async Task<ApplicationUser> GetUserAsync(GetUserDTO getuserDTO)
+        public async Task<ApplicationUser> GetUserAsync(string userId)
         {
-            return await _userManager.GetUserAsync(getuserDTO.User);
+            return await _userManager.FindByIdAsync(userId);
+        }
+
+        public async Task<string> GetUserNameAsync(string userId)
+        {
+            var user = await GetUserAsync(userId);
+            return user.UserName;
+        }
+
+        public async Task<string> GetUserNameAsync(ClaimsPrincipal claimsPrincipal)
+        {
+            var user = await GetUserAsync(claimsPrincipal);
+            return user.UserName;
+        }
+
+        public async Task<ApplicationUser> GetUserAsync(ClaimsPrincipal claimsPrincipal)
+        {
+            return await _userManager.GetUserAsync(claimsPrincipal);
         }
 
         public async Task<IdentityResult> ChangePasswordAsync(ChangepasswordDTO changepasswordDTO)
         {
-            var user =await GetUserAsync(new GetUserDTO()
-            {
-                User = changepasswordDTO.User,
-            });
+            var user = await GetUserAsync(changepasswordDTO.UserId);
             return await _userManager.ChangePasswordAsync(user, changepasswordDTO.CurrentPassword, changepasswordDTO.NewPassword);
         }
 

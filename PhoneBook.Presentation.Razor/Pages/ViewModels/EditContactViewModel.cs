@@ -31,7 +31,7 @@ namespace PhoneBook.Presentation.Razor.Pages.ViewModels
 
         [Display(Name = "تصویر مخاطب")]
 
-        public IFormFile? ProfileImage { get; set; }
+        public IFormFile? ContactImage { get; set; }
 
         public long ContactId { get; set; }
 

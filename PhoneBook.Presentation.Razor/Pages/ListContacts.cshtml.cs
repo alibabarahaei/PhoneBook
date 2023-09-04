@@ -7,6 +7,7 @@ using PhoneBook.Application.InterfaceServices;
 using PhoneBook.Presentation.Razor.Pages.ViewModels;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
+using PhoneBook.Presentation.Razor.Extensions;
 
 namespace PhoneBook.Presentation.Razor.Pages
 {
@@ -45,11 +46,8 @@ namespace PhoneBook.Presentation.Razor.Pages
 
             if (User.Identity.IsAuthenticated)
             {
-                var user = await _userService.GetUserAsync((new GetUserDTO()
-                {
-                    User = User
-                }));
-                filterContacts.User = user;
+
+                filterContacts.UserId = User.GetUserId();
                 var FilterContacts = await _contactService.FilterContactsAsync(filterContacts);
                 if (FilterContacts == null)
                 {
@@ -78,13 +76,9 @@ namespace PhoneBook.Presentation.Razor.Pages
 
             if (User.Identity.IsAuthenticated)
             {
-                var user =await _userService.GetUserAsync(new GetUserDTO()
-                {
-                    User = User
-                });
                 var result = await _contactService.DeleteContactAsync(new DeleteContactDTO()
                 {
-                    User = user,
+                    UserId = User.GetUserId(),
                     ContactId = contactId
                 });
                 if (result == ContactResult.Success)

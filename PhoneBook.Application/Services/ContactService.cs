@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PhoneBook.Application.Mapper;
 
 namespace PhoneBook.Application.Services
 {
@@ -51,16 +52,10 @@ namespace PhoneBook.Application.Services
             if (res)
             {
                 // create product
-                var newContact = new Contact()
-                {
-                    FirstName = addContactDTO.FirstName,
-                    LastName = addContactDTO.LastName,
-                    PhoneNumber = addContactDTO.PhoneNumber,
-                    PathContactImage = imageName,
-                    Gender = addContactDTO.Gender,
-                    User = addContactDTO.User
-                };
-
+                var newContact = ObjectMapper.Mapper.Map<Contact>(addContactDTO);
+                newContact.PathContactImage = imageName;
+                var user = await _userManager.FindByIdAsync(addContactDTO.UserId);
+                newContact.User = user;
                 await _contactRepository.AddEntity(newContact);
                 await _contactRepository.SaveChanges();
                 return ContactResult.Success;
@@ -72,7 +67,7 @@ namespace PhoneBook.Application.Services
         public async Task<ContactResult> DeleteContactAsync(DeleteContactDTO deleteContactDTO)
         {
             var contact = await _contactRepository.GetEntityById(deleteContactDTO.ContactId);
-            if (contact != null && contact.User.Id == deleteContactDTO.User.Id)
+            if (contact != null && contact.User.Id == deleteContactDTO.UserId)
             {
                  _contactRepository.DeletePermanent(contact);
                 await _contactRepository.SaveChanges();
@@ -109,8 +104,8 @@ namespace PhoneBook.Application.Services
         {
             var query = _contactRepository.GetQuery().AsQueryable();
 
-
-            query = query.Where(c => c.User.UserName == filterontactsDTO.User.UserName);
+            var user = await _userManager.FindByIdAsync(filterontactsDTO.UserId);
+            query = query.Where(c => c.User.UserName == user.UserName);
 
 
             #region filter
@@ -137,23 +132,14 @@ namespace PhoneBook.Application.Services
 
         public async Task<EditContactDTO> GetContactByIdAsync(GetContactByIdDTO getContactByIdDTO)
         {
-            var contact = await _contactRepository.GetEntityById(getContactByIdDTO.ContactId);
-            if (contact == null) return null;
-            if (contact.User.Id == getContactByIdDTO.User.Id)
-            {
-                return new EditContactDTO()
-                {
-                    FirstName = contact.FirstName,
-                    LastName = contact.LastName,
-                    PhoneNumber = contact.PhoneNumber,
-                    Gender = contact.Gender,
-                    PathContactImage = contact.PathContactImage
-                };
-            }
-            else
-            {
-                return null;
-            }
+            var contact =await _contactRepository.GetQuery().Include("User").FirstOrDefaultAsync(c => (c.User.Id == getContactByIdDTO.UserId) && (c.Id == getContactByIdDTO.ContactId));
+               var editContactDTO = ObjectMapper.Mapper.Map<EditContactDTO>(contact);
+               if (editContactDTO!=null)
+               {
+                   editContactDTO.ContactId = getContactByIdDTO.ContactId;
+               }
+
+               return editContactDTO;
         }
 
 

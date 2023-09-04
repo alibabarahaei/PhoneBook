@@ -14,7 +14,10 @@ namespace PhoneBook.Application.InterfaceServices
         Task<SignInResult> LoginUserAsync(LoginUserDTO loginUserDTO);
         Task LogOutUserAsync();
         Task<IdentityResult> EditProfileAsync(EditProfileDTO editProfileDTO);
-        Task<ApplicationUser> GetUserAsync(GetUserDTO getuserDTO);
+        Task<ApplicationUser> GetUserAsync(ClaimsPrincipal claimsPrincipal);
+        Task<ApplicationUser> GetUserAsync(string userId);
+        Task<string> GetUserNameAsync(string userId);
+        Task<string> GetUserNameAsync(ClaimsPrincipal claimsPrincipal);
         Task<IdentityResult> ChangePasswordAsync(ChangepasswordDTO changepasswordDTO);
 
     }

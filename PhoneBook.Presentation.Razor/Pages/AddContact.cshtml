@@ -64,10 +64,10 @@
                             <label for="images" class="drop-container" id="dropcontainer">
                                 <span class="drop-title">تصویر را رها کنید</span>
                                 یا
-                                <input type="file" id="images" accept="image/*" asp-for="@Model.AddContactViewModel.ProfileImage">
+                                <input type="file" id="images" accept="image/jpeg, image/png" asp-for="@Model.AddContactViewModel.ContactImage">
 
                             </label>
-                            <span asp-validation-for="@Model.AddContactViewModel.ProfileImage" class="text-danger" style="font-size: 13px"></span>
+                            <span asp-validation-for="@Model.AddContactViewModel.ContactImage" class="text-danger" style="font-size: 13px"></span>
                         </div>
                       
                     </div>

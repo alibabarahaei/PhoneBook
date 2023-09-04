@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -38,6 +39,9 @@ builder.Services.AddLiveReload(config =>
 
 builder.Services.AddRazorPages();
 
+
+
+builder.Services.AddAutoMapper(typeof(Program).Assembly); 
 
 var configurationSection = builder.Configuration;
 

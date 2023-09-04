@@ -8,6 +8,7 @@ using PhoneBook.Domain.Models.User;
 using PhoneBook.Presentation.Razor.Areas.Identity.Pages.ViewModels;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
+using AutoMapper;
 
 namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
 {
@@ -25,10 +26,12 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
 
         #region constuctor
         private readonly IUserService _userService;
+        private readonly IMapper _mapper;
 
-        public RegisterModel(IUserService userService)
+        public RegisterModel(IUserService userService, IMapper mapper)
         {
             _userService = userService;
+            _mapper = mapper;
         }
 
         #endregion
@@ -52,14 +55,7 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
-                var result = await _userService.RegisterUserAsync(new RegisterUserDTO()
-                {
-                    UserName = RegisterViewModel.UserName,
-                   
-                    Password = RegisterViewModel.Password
-                });
-
-
+                var result = await _userService.RegisterUserAsync(_mapper.Map<RegisterUserDTO>(RegisterViewModel));
 
                 if (!result.Succeeded)
                 {
@@ -83,11 +79,6 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
 
                         }
                     }
-
-
-
-
-
 
                     return Page();
                 }

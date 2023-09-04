@@ -224,3 +224,5 @@ C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\obj\Debug\n
 C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\obj\Debug\net6.0\PhoneBook.Presentation.Razor.genruntimeconfig.cache
 C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\obj\Debug\net6.0\ref\PhoneBook.Presentation.Razor.dll
 C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\bin\Debug\net6.0\Westwind.AspNetCore.LiveReload.dll
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

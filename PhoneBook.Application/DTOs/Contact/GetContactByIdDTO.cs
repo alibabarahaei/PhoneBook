@@ -9,7 +9,7 @@ namespace PhoneBook.Application.DTOs.Contact
 {
     public class GetContactByIdDTO
     {
-        public ApplicationUser User { get; set; }
+        public string UserId { get; set; }
         public long ContactId { get; set; }
     }
 }
