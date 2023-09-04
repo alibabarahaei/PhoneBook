@@ -2,12 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PhoneBook.Application.DTOs.Account;
+using PhoneBook.Application.DTOs.User;
 using PhoneBook.Application.InterfaceServices;
 using PhoneBook.Domain.Models.User;
 using PhoneBook.Presentation.Razor.Areas.Identity.Pages.ViewModels;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
-using PhoneBook.Application.DTOs.User;
 
 namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
 {

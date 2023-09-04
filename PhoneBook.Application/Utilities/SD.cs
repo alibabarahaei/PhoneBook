@@ -3,12 +3,8 @@
     public static class SD
     {
 
+
         #region path
-
-
-
-
-
 
         #region uploader
 

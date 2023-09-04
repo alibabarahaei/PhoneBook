@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
 using PhoneBook.Application.DTOs.Account;
 using PhoneBook.Application.DTOs.User;
 using PhoneBook.Application.Extensions;
 using PhoneBook.Application.InterfaceServices;
+using PhoneBook.Application.Models;
 using PhoneBook.Application.Utilities;
 using PhoneBook.Domain.Models.User;
 using System;
@@ -24,6 +26,7 @@ namespace PhoneBook.Application.Services
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+
 
         public UserService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<ApplicationUser> signInManager)
         {

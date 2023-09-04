@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using PhoneBook.Application.InterfaceServices;
+using PhoneBook.Application.Models;
 using PhoneBook.Application.Security.Identity;
 using PhoneBook.Application.Services;
+using PhoneBook.Application.Utilities;
 using PhoneBook.Domain.InterfaceRepositories.Base;
 using PhoneBook.Domain.Models.User;
 using PhoneBook.Infrastructure.EFCore.Context;
@@ -34,57 +36,51 @@ builder.Services.AddLiveReload(config =>
 #endregion
 
 
-// Add services to the container.
 builder.Services.AddRazorPages();
 
 
-
-
-
-
-
+var configurationSection = builder.Configuration;
 
 #region Config Identity
-
-
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     {
         options.Password.RequireNonAlphanumeric = false;
         options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
-
-
     })
     .AddEntityFrameworkStores<PhoneBookDbContext>()
     .AddDefaultTokenProviders()
     .AddErrorDescriber<PersianIdentityErrorDescriber>();
-
-
 #endregion
 
 
 #region ConfigCookie
 
 
-
-
-
-
 builder.Services.ConfigureApplicationCookie(options =>
 {
-   
     options.ExpireTimeSpan = TimeSpan.FromDays(10);
-    options.AccessDeniedPath = "/Identity/Account/AccessDenied";
-    options.Cookie.Name = "YourAppCookieName";
-    //options.Cookie.Expiration = TimeSpan.FromDays(5);
+    options.AccessDeniedPath = configurationSection.GetSection("Route:AccessDenied").Value ;
+    options.Cookie.Name = configurationSection.GetSection("Cookie:Name").Value;
     options.Cookie.HttpOnly = true;
-    options.LoginPath = "/Identity/Account/Login";
-    // ReturnUrlParameter requires 
-    //using Microsoft.AspNetCore.Authentication.Cookies;
+    options.LoginPath = configurationSection.GetSection("Route:Login").Value;
     options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
     options.SlidingExpiration = true;
 });
 
 #endregion
+
+
+
+
+#region MyRegion
+
+builder.Services.Configure<EmailInformationModel>(builder.Configuration.GetSection("Gmail"));
+builder.Services.Configure<StorePathModel>(builder.Configuration.GetSection("StorePath"));
+
+#endregion
+
+
+
 
 
 
@@ -105,6 +101,8 @@ builder.Services.AddDbContext<PhoneBookDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer"));
 });
+
+
 #endregion
 
 var app = builder.Build();
@@ -117,19 +115,11 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-
-
 app.UseLiveReload();
-
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapRazorPages();
-
 app.Run();
