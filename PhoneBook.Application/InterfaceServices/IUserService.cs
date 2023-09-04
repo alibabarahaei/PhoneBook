@@ -16,6 +16,6 @@ namespace PhoneBook.Application.InterfaceServices
         Task<IdentityResult> EditProfileAsync(EditProfileDTO editProfileDTO);
         Task<ApplicationUser> GetUserAsync(GetUserDTO getuserDTO);
         Task<IdentityResult> ChangePasswordAsync(ChangepasswordDTO changepasswordDTO);
-       
+
     }
 }

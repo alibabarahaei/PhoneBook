@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PhoneBook.Application.DTOs.Account;
+using PhoneBook.Application.DTOs.User;
 using PhoneBook.Application.InterfaceServices;
+using PhoneBook.Domain.Models.User;
 using PhoneBook.Presentation.Razor.Areas.Identity.Pages.ViewModels;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
@@ -11,7 +14,6 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
     [BindProperties]
     public class RegisterModel : PageModel
     {
-
 
         #region Properties
 
@@ -23,13 +25,12 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
 
         #region constuctor
         private readonly IUserService _userService;
-        
+
         public RegisterModel(IUserService userService)
         {
-
             _userService = userService;
-           
         }
+
         #endregion
 
 
@@ -57,6 +58,9 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
                    
                     Password = RegisterViewModel.Password
                 });
+
+
+
                 if (!result.Succeeded)
                 {
                    
@@ -66,26 +70,29 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
                         if (error.Code.Contains("Password"))
                         {
 
-                            ModelState.AddModelError("Password", error.Description);
+                            ModelState.AddModelError("RegisterViewModel.Password", error.Description);
                         }
                         else if (error.Code.Contains("UserName"))
                         {
 
-                            ModelState.AddModelError("UserName", error.Description);
+                            ModelState.AddModelError("RegisterViewModel.UserName", error.Description);
                         }
                         else
                         {
-                            ModelState.AddModelError("UserName", error.Description);
+                            ModelState.AddModelError("RegisterViewModel.UserName", error.Description);
 
                         }
-                        return Page();
-
                     }
+
+
+
 
 
 
                     return Page();
                 }
+
+        
                 TempData["SuccessMessage"] = "با موفقیت ثبت نام شدید";
                 return RedirectToPage("Login");
             }

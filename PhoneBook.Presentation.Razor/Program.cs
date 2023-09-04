@@ -50,7 +50,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     {
         options.Password.RequireNonAlphanumeric = false;
-        options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
+        options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
 
 
     })
@@ -65,12 +65,17 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 #region ConfigCookie
 
 
+
+
+
+
 builder.Services.ConfigureApplicationCookie(options =>
 {
    
     options.ExpireTimeSpan = TimeSpan.FromDays(10);
     options.AccessDeniedPath = "/Identity/Account/AccessDenied";
     options.Cookie.Name = "YourAppCookieName";
+    //options.Cookie.Expiration = TimeSpan.FromDays(5);
     options.Cookie.HttpOnly = true;
     options.LoginPath = "/Identity/Account/Login";
     // ReturnUrlParameter requires 
@@ -80,8 +85,6 @@ builder.Services.ConfigureApplicationCookie(options =>
 });
 
 #endregion
-
-
 
 
 
@@ -113,6 +116,9 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+
+
 app.UseLiveReload();
 
 

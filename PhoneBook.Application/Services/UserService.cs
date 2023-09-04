@@ -24,20 +24,14 @@ namespace PhoneBook.Application.Services
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly IMessageSender _messageSender;
-        private static Random rnd = new Random();
-        
 
-        public UserService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<ApplicationUser> signInManager, IMessageSender messageSender)
+        public UserService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<ApplicationUser> signInManager)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _signInManager = signInManager;
-           _messageSender = messageSender;
         }
         #endregion
-
-
 
 
         #region dispose
@@ -58,36 +52,35 @@ namespace PhoneBook.Application.Services
                 UserName = registerUserDTO.UserName,
                 
             };
-
-
             var IdentityResult= await _userManager.CreateAsync(user, registerUserDTO.Password);
-            if (IdentityResult.Succeeded)
-            {
+            //if (IdentityResult.Succeeded)
+            //{
 
-            var emailConfirmationNumber = rnd.Next(10000, 100000);
-            _messageSender.SendEmail(registerUserDTO.Email, "تاییدیه ایمیل", $"code : {emailConfirmationNumber}");
+            //var emailConfirmationNumber = rnd.Next(10000, 100000);
+            //_messageSender.SendEmail(registerUserDTO.Email, "تاییدیه ایمیل", $"code : {emailConfirmationNumber}");
 
-            }
+            //}
             return IdentityResult;
 
         }
 
         public async Task<IdentityUser> IsUserNameInUseAsync(string userName)
         {
-         
-       
             return await _userManager.FindByNameAsync(userName);
-          
         }
 
 
         public async Task<SignInResult> LoginUserAsync(LoginUserDTO loginUserDTO)
         {
+
             var result = await _signInManager.PasswordSignInAsync(loginUserDTO.UserName, loginUserDTO.Password, loginUserDTO.RememberMe, true);
+            if (result.Succeeded)
+            {
+            var user = await _userManager.FindByNameAsync(loginUserDTO.UserName);
+            await _signInManager.SignInAsync(user, loginUserDTO.RememberMe);
+            }
             return result;
         }
-
-      
 
 
         public async Task LogOutUserAsync()
@@ -95,7 +88,6 @@ namespace PhoneBook.Application.Services
             await _signInManager.SignOutAsync();
         }
 
-       
 
         public async Task<IdentityResult> EditProfileAsync(EditProfileDTO editProfileDTO)
         {
@@ -103,7 +95,6 @@ namespace PhoneBook.Application.Services
             currentUser.FirstName  = editProfileDTO.FirstName;
             currentUser.LastName = editProfileDTO.LastName;    
             currentUser.PhoneNumber= editProfileDTO.PhoneNumber;
-
 
             if (editProfileDTO.Gender != null)
             {
@@ -113,24 +104,12 @@ namespace PhoneBook.Application.Services
             {
                 currentUser.Gender = GenderTypes.Unknown;
             }
-
-
-
-
             if (editProfileDTO.ProfileImage != null && editProfileDTO.ProfileImage.IsImage())
             {
                 var imageName = Guid.NewGuid().ToString("N") + Path.GetExtension(editProfileDTO.ProfileImage.FileName);
                 editProfileDTO.ProfileImage.AddImageToServer(imageName, SD.UserProfileOriginServer, 64, 64, SD.UserProfileThumbServer, currentUser.PathProfileImage);
                 currentUser.PathProfileImage = imageName;
             }
-
-
-
-
-
-
-
-
             return await _userManager.UpdateAsync(currentUser);
         }
 
@@ -139,22 +118,14 @@ namespace PhoneBook.Application.Services
             return await _userManager.GetUserAsync(getuserDTO.User);
         }
 
-
-       
-
-
         public async Task<IdentityResult> ChangePasswordAsync(ChangepasswordDTO changepasswordDTO)
         {
-
             var user =await GetUserAsync(new GetUserDTO()
             {
                 User = changepasswordDTO.User,
             });
-
-
             return await _userManager.ChangePasswordAsync(user, changepasswordDTO.CurrentPassword, changepasswordDTO.NewPassword);
         }
 
-     
     }
 }

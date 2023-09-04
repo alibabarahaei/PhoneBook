@@ -1,44 +1,34 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PhoneBook.Application.DTOs.Account;
 using PhoneBook.Application.InterfaceServices;
+using PhoneBook.Domain.Models.User;
 using PhoneBook.Presentation.Razor.Areas.Identity.Pages.ViewModels;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
+using PhoneBook.Application.DTOs.User;
 
 namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
 {
-    [BindProperties]
     public class LoginModel : PageModel
     {
 
 
 
-
-
         #region Properties
-
+        [BindProperty]
         public LoginViewModel LoginViewModel { get; set; }
         #endregion
 
-
         #region constuctor
-
         private readonly IUserService _userService;
-        private readonly IMessageSender _messageSender;
-
-        public LoginModel(IUserService userService, IMessageSender messageSender)
+        public LoginModel(IUserService userService)
         {
             _userService = userService;
-            _messageSender = messageSender;
+        
         }
-
         #endregion
-
-
-
-
-
 
 
         public void OnGet()
@@ -51,11 +41,6 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> OnPost()
         {
-
-
-
-
-
             if (ModelState.IsValid)
             {
                 var result = await _userService.LoginUserAsync(new LoginUserDTO()
@@ -71,7 +56,6 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
                     {
                         TempData["WarningMessage"] = "اکانت شما تا اطلاع ثانوی قفل شده است";
                         //ModelState.AddModelError("UserName", "اکانت شما تا اطلاع ثانوی قفل شده است");
-
                     }
                     else
                     {
@@ -79,17 +63,13 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
                         LoginViewModel.UserName = "";
                         LoginViewModel.RememberMe = false;
                         //ModelState.AddModelError("UserName", "نام کاربری یا رمز عبور اشتباه هست");
-
                     }
                     return Page();
                 }
                 TempData["SuccessMessage"] = "با موفقیت ثبت نام شدید";
                 return RedirectToPage("../Index");
-
-
             }
             return Page();
-
         }
     }
 }

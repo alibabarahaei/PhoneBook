@@ -18,12 +18,13 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.ViewModels
         [StringLength(30, ErrorMessage = "طول {0} باید بین {2} و {1} باشد", MinimumLength = 8)]
         public string Password { get; set; }
 
-        [Display(Name = "یادآوری کلمه عبور")]
-        public bool RememberMe { get; set; }
+        [Display(Name = "یادآوری کلمه عبور")] 
+        public bool RememberMe { get; set; } = false;
 
 
         ////[Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         //public string Captcha { get; set; }
+
         #endregion
     }
 }
