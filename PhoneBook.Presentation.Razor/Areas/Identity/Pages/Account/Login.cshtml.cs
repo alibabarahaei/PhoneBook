@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PhoneBook.Application.DTOs.Account;
 using PhoneBook.Application.InterfaceServices;
+using PhoneBook.Presentation.Razor.Areas.Identity.Pages.ViewModels;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 
@@ -17,22 +18,7 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
 
         #region Properties
 
-        [Display(Name = "نام کاربری")]
-        [Required(ErrorMessage = "{0} را وارد کنید")]
-        [StringLength(40, ErrorMessage = "طول {0} باید بین {2} و {1} باشد", MinimumLength = 6)]
-        public string UserName { get; set; }
-
-        [Display(Name = "کلمه عبور")]
-        [Required(ErrorMessage = "{0} را وارد کنید")]
-        [StringLength(30, ErrorMessage = "طول {0} باید بین {2} و {1} باشد", MinimumLength = 8)]
-        public string Password { get; set; }
-
-        [Display(Name = "یادآوری کلمه عبور")]
-        public bool RememberMe { get; set; }
-
-
-        ////[Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        //public string Captcha { get; set; }
+        public LoginViewModel LoginViewModel { get; set; }
         #endregion
 
 
@@ -74,9 +60,9 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
             {
                 var result = await _userService.LoginUserAsync(new LoginUserDTO()
                 {
-                    UserName = UserName,
-                    Password = Password,
-                    RememberMe = RememberMe
+                    UserName = LoginViewModel.UserName,
+                    Password = LoginViewModel.Password,
+                    RememberMe = LoginViewModel.RememberMe
                 });
 
                 if (!result.Succeeded)
@@ -90,8 +76,8 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
                     else
                     {
                         TempData["WarningMessage"] = "نام کاربری یا رمز عبور اشتباه هست";
-                        UserName = "";
-                        RememberMe = false;
+                        LoginViewModel.UserName = "";
+                        LoginViewModel.RememberMe = false;
                         //ModelState.AddModelError("UserName", "نام کاربری یا رمز عبور اشتباه هست");
 
                     }

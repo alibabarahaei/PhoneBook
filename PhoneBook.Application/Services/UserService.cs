@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using PhoneBook.Application.DTOs.Account;
 using PhoneBook.Application.DTOs.User;
 using PhoneBook.Application.Extensions;
 using PhoneBook.Application.InterfaceServices;
 using PhoneBook.Application.Utilities;
 using PhoneBook.Domain.Models.User;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+using System.Security.Policy;
+using System.Text;
+using System.Threading.Tasks;
 
 
 namespace PhoneBook.Application.Services

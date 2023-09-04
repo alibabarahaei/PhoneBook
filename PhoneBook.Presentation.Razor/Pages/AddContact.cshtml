@@ -22,15 +22,15 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="userinput1">نام</label>
-                                <input type="text" id="userinput1" class="form-control border-primary" asp-for="FirstName">
-                                <span asp-validation-for="FirstName" class="text-danger" style="font-size: 13px"></span>
+                                <input type="text" id="userinput1" class="form-control border-primary" asp-for="@Model.AddContactViewModel.FirstName">
+                                <span asp-validation-for="@Model.AddContactViewModel.FirstName" class=" text-danger" style="font-size: 13px"></span>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="userinput2">نام خانوادگی</label>
-                                <input type="text" id="userinput2" class="form-control border-primary" asp-for="LastName">
-                                <span asp-validation-for="LastName" class="text-danger" style="font-size: 13px"></span>
+                                <input type="text" id="userinput2" class="form-control border-primary" asp-for="@Model.AddContactViewModel.LastName">
+                                <span asp-validation-for="@Model.AddContactViewModel.LastName" class="text-danger" style="font-size: 13px"></span>
                             </div>
                         </div>
                     </div>
@@ -39,21 +39,21 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="userinput3">موبایل</label>
-                                <input type="text" id="userinput3" class="form-control border-primary" asp-for="PhoneNumber">
-                                <span asp-validation-for="PhoneNumber" class="text-danger" style="font-size: 13px"></span>
+                                <input type="text" id="userinput3" class="form-control border-primary" asp-for="@Model.AddContactViewModel.PhoneNumber">
+                                <span asp-validation-for="@Model.AddContactViewModel.PhoneNumber" class="text-danger" style="font-size: 13px"></span>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="userinput4" asp-for="Gender">جنسیت</label>
-                                <select id="userinput4"  class="form-control  border-primary"  asp-for="Gender">
+                                <label for="userinput4" asp-for="@Model.AddContactViewModel.Gender">جنسیت</label>
+                                <select id="userinput4" class="form-control  border-primary" asp-for="@Model.AddContactViewModel.Gender">
                                     
                                     <option value="U"></option>
                                     <option value='M'>آقا</option>
                                     <option value='W'>خانم</option>
 
                                 </select>
-                                <span asp-validation-for="Gender" class="text-danger" style="font-size: 13px"></span>
+                                <span asp-validation-for="@Model.AddContactViewModel.Gender" class="text-danger" style="font-size: 13px"></span>
                             </div>
                         </div>
                     </div>
@@ -64,10 +64,10 @@
                             <label for="images" class="drop-container" id="dropcontainer">
                                 <span class="drop-title">تصویر را رها کنید</span>
                                 یا
-                                <input type="file" id="images" accept="image/*"  asp-for="ProfileImage">
+                                <input type="file" id="images" accept="image/*" asp-for="@Model.AddContactViewModel.ProfileImage">
 
                             </label>
-                            <span asp-validation-for="ProfileImage" class="text-danger" style="font-size: 13px"></span>
+                            <span asp-validation-for="@Model.AddContactViewModel.ProfileImage" class="text-danger" style="font-size: 13px"></span>
                         </div>
                       
                     </div>

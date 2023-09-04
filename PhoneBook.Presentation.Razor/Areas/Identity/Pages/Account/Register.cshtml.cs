@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.ComponentModel.DataAnnotations;
-using System.Xml.Linq;
 using PhoneBook.Application.DTOs.Account;
 using PhoneBook.Application.InterfaceServices;
+using PhoneBook.Presentation.Razor.Areas.Identity.Pages.ViewModels;
+using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
 {
@@ -13,23 +14,8 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
 
 
         #region Properties
-        [Display(Name = "نام کاربری")]
-        [Required(ErrorMessage = "{0} را وارد کنید")]
-        [StringLength(40, ErrorMessage = "طول {0} باید بین {2} و {1} باشد", MinimumLength = 6)]
-        [PageRemote(PageHandler = "IsUserNameInUse", HttpMethod = "Get")]
-        public string UserName { get; set; }
 
-        [Display(Name = "کلمه عبور")]
-        [Required(ErrorMessage = "{0} را وارد کنید")]
-        [MinLength(8, ErrorMessage = "{0} باید بیشتر از 7 کاراکتر باشد")]
-        [StringLength(30, ErrorMessage = "طول {0} باید بین {2} و {1} باشد", MinimumLength = 8)]
-        public string Password { get; set; }
-
-        [Display(Name = "کلمه عبور")]
-        [Required(ErrorMessage = "{0} را وارد کنید")]
-        [Compare("Password", ErrorMessage = "رمز عبور شما تطابق ندارد")]
-        public string ConfirmPassword { get; set; }
-
+        public RegisterViewModel RegisterViewModel { get; set; }
         #endregion
 
 
@@ -67,9 +53,9 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
             {
                 var result = await _userService.RegisterUserAsync(new RegisterUserDTO()
                 {
-                    UserName = UserName,
+                    UserName = RegisterViewModel.UserName,
                    
-                    Password = Password
+                    Password = RegisterViewModel.Password
                 });
                 if (!result.Succeeded)
                 {

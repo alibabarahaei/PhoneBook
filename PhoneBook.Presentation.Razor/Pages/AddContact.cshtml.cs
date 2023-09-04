@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using PhoneBook.Application.DTOs.Contact;
 using PhoneBook.Application.DTOs.User;
 using PhoneBook.Application.InterfaceServices;
+using PhoneBook.Presentation.Razor.Pages.ViewModels;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
-using PhoneBook.Application.DTOs.Contact;
-using Microsoft.AspNetCore.Authorization;
 
 namespace PhoneBook.Presentation.Razor.Pages
 {
@@ -17,34 +18,7 @@ namespace PhoneBook.Presentation.Razor.Pages
 
 
         #region properties
-
-        [Display(Name = "نام")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        [MaxLength(200, ErrorMessage = "{0} نمی تواند بیشتر از {1} کاراکتر باشد")]
-        public string FirstName { get; set; }
-
-
-        [Display(Name = "نام خانوادگی")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        [MaxLength(200, ErrorMessage = "{0} نمی تواند بیشتر از {1} کاراکتر باشد")]
-        public string LastName { get; set; }
-
-
-        [Display(Name = "شَماره موبایل")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        [MaxLength(200, ErrorMessage = "{0} نمی تواند بیشتر از {1} عدد باشد")]
-        [DataType("Number")]
-        public string PhoneNumber { get; set; }
-
-        [Display(Name = "جنسیت")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        public char Gender { get; set; }
-
-
-        [Display(Name = "تصویر پروفایل")]
-        [Required(ErrorMessage = "لطفا {0} را آپلود کنید")]
-        public IFormFile ProfileImage { get; set; }
-
+        public AddContactViewModel AddContactViewModel { get; set; }
         #endregion
 
         #region constructor
@@ -90,12 +64,12 @@ namespace PhoneBook.Presentation.Razor.Pages
 
                     var newConatct = new AddContactDTO()
                     {
-                        FirstName = FirstName,
-                        LastName = LastName,
-                        PhoneNumber = PhoneNumber,
+                        FirstName = AddContactViewModel.FirstName,
+                        LastName = AddContactViewModel.LastName,
+                        PhoneNumber = AddContactViewModel.PhoneNumber,
                         User = user,
-                        Gender = Gender,
-                        ContactImage = ProfileImage
+                        Gender = AddContactViewModel.Gender,
+                        ContactImage = AddContactViewModel.ProfileImage
                     };
                     var result = await _contactService.AddContactAsync(newConatct);
 
@@ -107,9 +81,9 @@ namespace PhoneBook.Presentation.Razor.Pages
                     else
                     {
                         TempData["WarningMessage"] = "خطا";
-                        FirstName = null;
-                        LastName = null;
-                        PhoneNumber = null;
+                        AddContactViewModel.FirstName = null;
+                        AddContactViewModel.LastName = null;
+                        AddContactViewModel.PhoneNumber = null;
                         return RedirectToPage("ListContacts");
                     }
 

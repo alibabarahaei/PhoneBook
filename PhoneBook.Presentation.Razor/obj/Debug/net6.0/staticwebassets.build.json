@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uiNQk9mvLITJ+y19GFDJ7XhPP1UWZX4Bfz8o+ggvE3I=",
+  "Hash": "1bUhmynH0mEQR/4P86lReC3+MCauypZaAqTLVxd+7bQ=",
   "Source": "PhoneBook.Presentation.Razor",
   "BasePath": "_content/PhoneBook.Presentation.Razor",
   "Mode": "Default",
@@ -901,12 +901,12 @@
       "OriginalItemSpec": "wwwroot\\js\\sidebar.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "PhoneBook.Presentation.Razor",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
       "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -915,15 +915,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "PhoneBook.Presentation.Razor",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
       "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -932,15 +932,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "PhoneBook.Presentation.Razor",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
       "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -949,7 +949,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "SourceId": "PhoneBook.Presentation.Razor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
+      "BasePath": "_content/PhoneBook.Presentation.Razor",
+      "RelativePath": "lib/jquery/LICENSE.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
@@ -1037,12 +1054,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "PhoneBook.Presentation.Razor",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
       "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "lib/jquery/dist/jquery.js",
+      "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1051,15 +1068,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "PhoneBook.Presentation.Razor",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
       "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "lib/jquery/dist/jquery.min.js",
+      "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1068,15 +1085,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "PhoneBook.Presentation.Razor",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
       "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "lib/jquery/dist/jquery.min.map",
+      "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1085,24 +1102,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "SourceId": "PhoneBook.Presentation.Razor",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
-      "BasePath": "_content/PhoneBook.Presentation.Razor",
-      "RelativePath": "lib/jquery/LICENSE.txt",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\f718e4b95e9c41359a57af84372365e8.jpg",

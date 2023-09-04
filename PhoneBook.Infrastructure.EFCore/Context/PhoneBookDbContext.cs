@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using PhoneBook.Domain.Models.Contacts;
 using PhoneBook.Domain.Models.User;
 using System.Reflection;
-using PhoneBook.Domain.Models.Contacts;
 
 namespace PhoneBook.Infrastructure.EFCore.Context
 {

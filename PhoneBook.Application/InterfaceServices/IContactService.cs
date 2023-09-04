@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using PhoneBook.Application.DTOs.Account;
+using PhoneBook.Application.DTOs.Contact;
 using PhoneBook.Application.DTOs.User;
 using PhoneBook.Domain.Models.User;
 using System;
@@ -7,7 +8,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PhoneBook.Application.DTOs.Contact;
 using EditProfileDTO = PhoneBook.Application.DTOs.User.EditProfileDTO;
 
 namespace PhoneBook.Application.InterfaceServices

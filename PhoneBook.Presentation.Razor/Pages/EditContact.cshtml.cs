@@ -6,6 +6,7 @@ using PhoneBook.Application.DTOs.User;
 using PhoneBook.Application.InterfaceServices;
 using PhoneBook.Application.Services;
 using PhoneBook.Domain.Models.Contacts;
+using PhoneBook.Presentation.Razor.Pages.ViewModels;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 
@@ -16,38 +17,9 @@ namespace PhoneBook.Presentation.Razor.Pages
     public class EditContactModel : PageModel
     {
 
+
         #region properties
-
-        [Display(Name = "نام")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        [MaxLength(200, ErrorMessage = "{0} نمی تواند بیشتر از {1} کاراکتر باشد")]
-        public string FirstName { get; set; }
-
-
-        [Display(Name = "نام خانوادگی")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        [MaxLength(200, ErrorMessage = "{0} نمی تواند بیشتر از {1} کاراکتر باشد")]
-        public string LastName { get; set; }
-
-
-        [Display(Name = "شَماره موبایل")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        [MaxLength(200, ErrorMessage = "{0} نمی تواند بیشتر از {1} عدد باشد")]
-        [DataType("Number")]
-        public string PhoneNumber { get; set; }
-
-        [Display(Name = "جنسیت")]
-        public char? Gender { get; set; }
-
-
-        [Display(Name = "تصویر مخاطب")]
-        
-        public IFormFile? ProfileImage { get; set; }
-
-        public long ContactId { get; set; }
-
-        public string? PathContactImage { get; set; }
-
+        public EditContactViewModel EditContactViewModel { get; set; }
         #endregion
 
         #region constructor
@@ -94,12 +66,12 @@ namespace PhoneBook.Presentation.Razor.Pages
                     return RedirectToPage();
                 }
 
-                ContactId = contactid;
-                FirstName =contact.FirstName;
-                LastName=contact.LastName;
-                PhoneNumber = contact.PhoneNumber;
-                PathContactImage = contact.PathContactImage;
-                Gender = contact.Gender;
+                EditContactViewModel.ContactId = contactid;
+                EditContactViewModel.FirstName = contact.FirstName;
+                EditContactViewModel.LastName = contact.LastName;
+                EditContactViewModel.PhoneNumber = contact.PhoneNumber;
+                EditContactViewModel.PathContactImage = contact.PathContactImage;
+                EditContactViewModel.Gender = contact.Gender;
                 return Page();
             }
             TempData["WarningMessage"] = "در سایت ورود کنید";
@@ -124,12 +96,12 @@ namespace PhoneBook.Presentation.Razor.Pages
 
                     var editConatct = new EditContactDTO()
                     {
-                        ContactId = ContactId,
-                        FirstName = FirstName,
-                        LastName = LastName,
-                        PhoneNumber = PhoneNumber,
-                        Gender = Gender,
-                        ContactImage = ProfileImage
+                        ContactId = EditContactViewModel.ContactId,
+                        FirstName = EditContactViewModel.FirstName,
+                        LastName = EditContactViewModel.LastName,
+                        PhoneNumber = EditContactViewModel.PhoneNumber,
+                        Gender = EditContactViewModel.Gender,
+                        ContactImage = EditContactViewModel.ProfileImage
                     };
                     var result = await _contactService.EditContactAsync(editConatct);
 
@@ -141,9 +113,9 @@ namespace PhoneBook.Presentation.Razor.Pages
                     else
                     {
                         TempData["WarningMessage"] = "خطا";
-                        FirstName = null;
-                        LastName = null;
-                        PhoneNumber = null;
+                        EditContactViewModel.FirstName = null;
+                        EditContactViewModel.LastName = null;
+                        EditContactViewModel.PhoneNumber = null;
                         return RedirectToPage("ListContacts");
                     }
 

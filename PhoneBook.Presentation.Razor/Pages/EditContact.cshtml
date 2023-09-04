@@ -14,7 +14,7 @@
         <div class="">
 
             <form class="form" method="Post" enctype="multipart/form-data">
-                <input type="hidden" asp-for="ContactId"/>
+                <input type="hidden" asp-for="@Model.EditContactViewModel.ContactId" />
                 <div class="form-body ">
                     <h4 class="form-section ">
                         <i class="icon-direction"></i> اطلاعات مخاطب
@@ -23,15 +23,15 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="userinput1">نام</label>
-                                <input type="text" id="userinput1" class="form-control border-primary" asp-for="FirstName">
-                                <span asp-validation-for="FirstName" class="text-danger" style="font-size: 13px"></span>
+                                <input type="text" id="userinput1" class="form-control border-primary" asp-for="@Model.EditContactViewModel.FirstName">
+                                <span asp-validation-for="@Model.EditContactViewModel.FirstName" class="text-danger" style="font-size: 13px"></span>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="userinput2">نام خانوادگی</label>
-                                <input type="text" id="userinput2" class="form-control border-primary" asp-for="LastName">
-                                <span asp-validation-for="LastName" class="text-danger" style="font-size: 13px"></span>
+                                <input type="text" id="userinput2" class="form-control border-primary" asp-for="@Model.EditContactViewModel.LastName">
+                                <span asp-validation-for="@Model.EditContactViewModel.LastName" class="text-danger" style="font-size: 13px"></span>
                             </div>
                         </div>
                     </div>
@@ -40,20 +40,20 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="userinput3">موبایل</label>
-                                <input type="text" id="userinput3" class="form-control border-primary" asp-for="PhoneNumber">
-                                <span asp-validation-for="PhoneNumber" class="text-danger" style="font-size: 13px"></span>
+                                <input type="text" id="userinput3" class="form-control border-primary" asp-for="@Model.EditContactViewModel.PhoneNumber">
+                                <span asp-validation-for="@Model.EditContactViewModel.PhoneNumber" class="text-danger" style="font-size: 13px"></span>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="userinput4" asp-for="Gender">جنسیت</label>
-                                <select id="userinput4"  class="form-control  border-primary" asp-for="Gender">
-                                    <option Selected="@(Model.Gender == 'U')" value='U'></option>
-                                    <option Selected="@(Model.Gender == 'M')" value='M'>آقا</option>
-                                    <option Selected="@(Model.Gender == 'W')" value='W'>خانم</option>
+                                <label for="userinput4" asp-for="@Model.EditContactViewModel.Gender">جنسیت</label>
+                                <select id="userinput4" class="form-control  border-primary" asp-for="@Model.EditContactViewModel.Gender">
+                                    <option Selected="@(Model.EditContactViewModel.Gender == 'U')" value='U'></option>
+                                    <option Selected="@(Model.EditContactViewModel.Gender == 'M')" value='M'>آقا</option>
+                                    <option Selected="@(Model.EditContactViewModel.Gender == 'W')" value='W'>خانم</option>
 
                                 </select>
-                                <span asp-validation-for="Gender" class="text-danger" style="font-size: 13px"></span>
+                                <span asp-validation-for="@Model.EditContactViewModel.Gender" class="text-danger" style="font-size: 13px"></span>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                     <div class="row my-3">
                         <div class="col ">
 
-                            <img src="@(SD.ContactImagesThumb + Model.PathContactImage)" class="rounded-circle width-50  mx-auto d-block" alt="user image">
+                            <img src="@(SD.ContactImagesThumb + Model.EditContactViewModel.PathContactImage)" class="rounded-circle width-50  mx-auto d-block" alt="user image">
                         </div>
                     </div>
                     <div class="row">
@@ -70,7 +70,7 @@
                             <label for="images" class="drop-container" id="dropcontainer">
                                 <span class="drop-title">تصویر را رها کنید</span>
                                 یا
-                                <input type="file" id="images" accept="image/*" asp-for="ProfileImage">
+                                <input type="file" id="images" accept="image/*" asp-for="@Model.EditContactViewModel.ProfileImage">
 
                             </label>
                         </div>

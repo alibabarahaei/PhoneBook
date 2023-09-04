@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using PhoneBook.Domain.Models.Contacts;
 using System.ComponentModel.DataAnnotations;
 using System.Net.Sockets;
-using PhoneBook.Domain.Models.Contacts;
 
 namespace PhoneBook.Domain.Models.User
 {

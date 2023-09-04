@@ -1,5 +1,5 @@
-﻿using System.Text.RegularExpressions;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
+using System.Text.RegularExpressions;
 
 namespace PhoneBook.Application.Utilities
 {
