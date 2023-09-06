@@ -19,13 +19,13 @@ namespace PhoneBook.Application.Models
         #region default images
 
         public static string DefaultProfileman { get; set; }
-        public static string DefaultProfilewoman  { get; set; }
+        public static string DefaultProfilewoman { get; set; }
 
 
-    #endregion
+        #endregion
 
 
-    #region user avatar
+        #region user avatar
 
         public static string UserProfileOrigin { get; set; }
         public static string UserProfileOriginServer { get; set; }

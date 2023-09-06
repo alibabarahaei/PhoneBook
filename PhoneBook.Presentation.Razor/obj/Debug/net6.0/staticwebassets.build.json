@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "d12Y0MKJ1Zno7ZIUp4c1xshzmV5sVVtmcWoEcgsu+GY=",
+  "Hash": "y7HPubukQRcQU8aq6P6T9MPNWrCom5+Ln+shVf6j5S0=",
   "Source": "PhoneBook.Presentation.Razor",
   "BasePath": "_content/PhoneBook.Presentation.Razor",
   "Mode": "Default",
@@ -1343,6 +1343,23 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\b727131b50af438493fdfb1637138d3c.jpg",
+      "SourceId": "PhoneBook.Presentation.Razor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
+      "BasePath": "_content/PhoneBook.Presentation.Razor",
+      "RelativePath": "userprofile/images/b727131b50af438493fdfb1637138d3c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\userprofile\\images\\b727131b50af438493fdfb1637138d3c.jpg"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\f718e4b95e9c41359a57af84372365e8.jpg",
       "SourceId": "PhoneBook.Presentation.Razor",
       "SourceType": "Discovered",
@@ -1358,6 +1375,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\userprofile\\images\\f718e4b95e9c41359a57af84372365e8.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\thumb\\b727131b50af438493fdfb1637138d3c.jpg",
+      "SourceId": "PhoneBook.Presentation.Razor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\",
+      "BasePath": "_content/PhoneBook.Presentation.Razor",
+      "RelativePath": "userprofile/images/thumb/b727131b50af438493fdfb1637138d3c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\userprofile\\images\\thumb\\b727131b50af438493fdfb1637138d3c.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\thumb\\f718e4b95e9c41359a57af84372365e8.jpg",

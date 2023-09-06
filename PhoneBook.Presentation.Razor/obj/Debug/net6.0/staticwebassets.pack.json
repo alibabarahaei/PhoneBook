@@ -309,8 +309,16 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\b727131b50af438493fdfb1637138d3c.jpg",
+      "PackagePath": "staticwebassets\\userprofile\\images\\b727131b50af438493fdfb1637138d3c.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\f718e4b95e9c41359a57af84372365e8.jpg",
       "PackagePath": "staticwebassets\\userprofile\\images\\f718e4b95e9c41359a57af84372365e8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\thumb\\b727131b50af438493fdfb1637138d3c.jpg",
+      "PackagePath": "staticwebassets\\userprofile\\images\\thumb\\b727131b50af438493fdfb1637138d3c.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\thumb\\f718e4b95e9c41359a57af84372365e8.jpg",

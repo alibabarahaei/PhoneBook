@@ -51,21 +51,16 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> OnPostAsync()
         {
-          
-
             if (ModelState.IsValid)
             {
                 var result = await _userService.RegisterUserAsync(_mapper.Map<RegisterUserDTO>(RegisterViewModel));
 
                 if (!result.Succeeded)
                 {
-                   
                     foreach (var error in result.Errors)
                     {
-
                         if (error.Code.Contains("Password"))
                         {
-
                             ModelState.AddModelError("RegisterViewModel.Password", error.Description);
                         }
                         else if (error.Code.Contains("UserName"))
@@ -83,7 +78,7 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
                     return Page();
                 }
 
-        
+
                 TempData["SuccessMessage"] = "با موفقیت ثبت نام شدید";
                 return RedirectToPage("Login");
             }
