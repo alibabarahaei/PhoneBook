@@ -25,8 +25,6 @@ namespace PhoneBook.Application.Services
 
         #region constructor
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IGenericRepository<Contact> _contactRepository;
        
 
@@ -147,11 +145,17 @@ namespace PhoneBook.Application.Services
         #region dispose
 
 
-        public async ValueTask DisposeAsync()
+        public void Dispose()
         {
-            //  await _contactManager.DisposeAsync()
+            _userManager.Dispose();
+         
+            if (_contactRepository is IDisposable contactRepositoryDisposable)
+                contactRepositoryDisposable.Dispose();
+            else
+                _ = _contactRepository.DisposeAsync().AsTask();
         }
-
+ 
         #endregion
+
     }
 }

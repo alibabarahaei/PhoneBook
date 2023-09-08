@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using PhoneBook.Application.DTOs.Account;
 using PhoneBook.Application.DTOs.Contact;
 using PhoneBook.Domain.Models.Contacts;
+using PhoneBook.Domain.Models.User;
 
 namespace PhoneBook.Application.Mapper
 {
@@ -31,6 +33,7 @@ namespace PhoneBook.Application.Mapper
         public AspnetRunDtoMapper()
         {
             CreateMap<Contact, AddContactDTO>().ReverseMap();
+            CreateMap<ApplicationUser, RegisterUserDTO>().ReverseMap();
             CreateMap<Contact, EditContactDTO>().ReverseMap();
         }
     }

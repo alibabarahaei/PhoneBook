@@ -6,7 +6,7 @@ using System.Security.Claims;
 
 namespace PhoneBook.Application.InterfaceServices
 {
-    public interface IUserService : IAsyncDisposable
+    public interface IUserService : IDisposable
     {
 
         Task<IdentityResult> RegisterUserAsync(RegisterUserDTO registerUserDTO);
@@ -14,11 +14,15 @@ namespace PhoneBook.Application.InterfaceServices
         Task<SignInResult> LoginUserAsync(LoginUserDTO loginUserDTO);
         Task LogOutUserAsync();
         Task<IdentityResult> EditProfileAsync(EditProfileDTO editProfileDTO);
-        Task<ApplicationUser> GetUserAsync(ClaimsPrincipal claimsPrincipal);
-        Task<ApplicationUser> GetUserAsync(string userId);
-        Task<string> GetUserNameAsync(string userId);
-        Task<string> GetUserNameAsync(ClaimsPrincipal claimsPrincipal);
+        Task<ApplicationUser> GetUserWithClaimsPrincipalAsync(ClaimsPrincipal claimsPrincipal);
+        Task<ApplicationUser> GetUserWithUserIdAsync(string userId);
+        Task<string> GetUserNameWithUserIdAsync(string userId);
+        Task<string> GetUserNameWithClaimsPrincipalAsync(ClaimsPrincipal claimsPrincipal);
         Task<IdentityResult> ChangePasswordAsync(ChangepasswordDTO changepasswordDTO);
-
+        List<UserNotEmailConfirmedDTO> GetUsersNotEmailConfirmed();
+        Task<string> GetEmailConfirmationTokenAsync(string email);
+        Task<ApplicationUser> GetUserWithEmailAsync(string email);
+        Task UpdateUserAsync(ApplicationUser user);
+        Task SignOutAsync();
     }
 }

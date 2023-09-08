@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets\\contact\\images\\df061c1584144b3a80ffb37e55edfe08.png"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\e2ff6e256312495ea992980e166c8df9.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\e2ff6e256312495ea992980e166c8df9.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\e31b82aecf6c4d54b62c49f6cb49753b.jpg",
       "PackagePath": "staticwebassets\\contact\\images\\e31b82aecf6c4d54b62c49f6cb49753b.jpg"
     },
@@ -151,6 +155,10 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\df061c1584144b3a80ffb37e55edfe08.png",
       "PackagePath": "staticwebassets\\contact\\images\\thumb\\df061c1584144b3a80ffb37e55edfe08.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\e2ff6e256312495ea992980e166c8df9.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\e2ff6e256312495ea992980e166c8df9.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\e31b82aecf6c4d54b62c49f6cb49753b.jpg",

@@ -226,3 +226,11 @@ C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\obj\Debug\n
 C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\bin\Debug\net6.0\Westwind.AspNetCore.LiveReload.dll
 C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\bin\Debug\net6.0\PhoneBook.WorkerService.SendEmail.deps.json
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\bin\Debug\net6.0\PhoneBook.WorkerService.SendEmail.runtimeconfig.json
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\bin\Debug\net6.0\PhoneBook.WorkerService.SendEmail.exe
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\bin\Debug\net6.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\bin\Debug\net6.0\Microsoft.Extensions.Hosting.dll
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\bin\Debug\net6.0\PhoneBook.WorkerService.SendEmail.dll
+C:\Users\user\Desktop\project\PhoneBook\PhoneBook.Presentation.Razor\bin\Debug\net6.0\PhoneBook.WorkerService.SendEmail.pdb

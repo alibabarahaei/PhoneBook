@@ -23,7 +23,8 @@ namespace PhoneBook.Domain.Models.User
 
         public char? Gender { get; set; } = GenderTypes.Unknown;
 
-
+        
+        public string? UrlEmailConfirmation { get; set; }
 
         #region relations
 

@@ -69,7 +69,7 @@ namespace PhoneBook.Presentation.Razor.Pages.Profile
         {
 
 
-            var user = await _userService.GetUserAsync(User);
+            var user = await _userService.GetUserWithClaimsPrincipalAsync(User);  //TODO
             ;
             FirstName = user.FirstName;
             LastName = user.LastName;

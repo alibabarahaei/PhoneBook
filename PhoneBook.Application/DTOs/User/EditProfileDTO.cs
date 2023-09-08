@@ -14,7 +14,7 @@ namespace PhoneBook.Application.DTOs.User
     {
 
   
-        public ClaimsPrincipal User { get; set; }
+        public ClaimsPrincipal User { get; set; }   //TODO     string userid
 
 
         public string FirstName { get; set; }

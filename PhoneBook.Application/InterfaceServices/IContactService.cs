@@ -12,7 +12,7 @@ using EditProfileDTO = PhoneBook.Application.DTOs.User.EditProfileDTO;
 
 namespace PhoneBook.Application.InterfaceServices
 {
-    public interface IContactService: IAsyncDisposable
+    public interface IContactService: IDisposable
     {
         Task<ContactResult> AddContactAsync(AddContactDTO addContactDTO);
         Task<ContactResult> DeleteContactAsync(DeleteContactDTO deleteContactDTO);

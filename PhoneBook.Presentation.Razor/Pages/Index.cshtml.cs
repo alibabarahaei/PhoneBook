@@ -8,15 +8,10 @@ using PhoneBook.Domain.Models.User;
 
 namespace PhoneBook.Presentation.Razor.Pages
 {
-    
+
     [Authorize]
     public class IndexModel : PageModel
     {
-
-
-
-
-
 
 
         private readonly ILogger<IndexModel> _logger;
@@ -28,11 +23,13 @@ namespace PhoneBook.Presentation.Razor.Pages
 
         public async Task<RedirectToPageResult> OnGet()
         {
-       
 
+            return RedirectToPage("ListContacts");
+        }
+        public async Task<RedirectToPageResult> ConfirmEmailOnGet()
+        {
 
-
-
+            //var confirmationLink = Url.Action(nameof(ConfirmEmail), "Account", new { token, email = user.Email }, Request.Scheme);
 
 
             return RedirectToPage("ListContacts");

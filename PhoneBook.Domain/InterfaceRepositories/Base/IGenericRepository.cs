@@ -1,4 +1,5 @@
 ﻿using PhoneBook.Domain.Models.Base;
+using PhoneBook.Domain.Models.User;
 
 namespace PhoneBook.Domain.InterfaceRepositories.Base
 {

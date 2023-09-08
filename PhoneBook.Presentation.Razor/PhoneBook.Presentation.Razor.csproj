@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PhoneBook.Application\PhoneBook.Application.csproj" />
     <ProjectReference Include="..\PhoneBook.Infrastructure.EFCore\PhoneBook.Infrastructure.EFCore.csproj" />
+    <ProjectReference Include="..\PhoneBook.WorkerService.SendEmail\PhoneBook.WorkerService.SendEmail.csproj" />
   </ItemGroup>
 
   <ItemGroup>
