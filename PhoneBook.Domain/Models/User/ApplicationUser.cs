@@ -26,9 +26,10 @@ namespace PhoneBook.Domain.Models.User
         
         public string? UrlEmailConfirmation { get; set; }
 
+
         #region relations
 
-        
+
         public ICollection<Contact> Contacts { get; set; }
 
         #endregion

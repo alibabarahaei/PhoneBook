@@ -15,14 +15,11 @@ namespace PhoneBook.Application.Services
     {
         #region constructor
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
 
-
-        public UserService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<ApplicationUser> signInManager)
+        public UserService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
             _userManager = userManager;
-            _roleManager = roleManager;
             _signInManager = signInManager;
         }
         #endregion
@@ -33,7 +30,6 @@ namespace PhoneBook.Application.Services
         public void Dispose()
         {
             _userManager.Dispose();
-            _roleManager.Dispose();
         }
 
 
@@ -138,43 +134,48 @@ namespace PhoneBook.Application.Services
 
         public List<UserNotEmailConfirmedDTO> GetUsersNotEmailConfirmed()
         {
-            // TODO user can be null
-            //var users = _userManager.Users.Where(u => (u.EmailConfirmed == false)).ToList();
-            // var userNotEmailConfirmed = new List<UserNotEmailConfirmedDTO>();
-            // foreach (var user in users)
-            // {
-            //     userNotEmailConfirmed.Add(new UserNotEmailConfirmedDTO()
-            //     {
-            //         Url = Url.Page()
-            //     }
 
-            //         _userManager.toke
-            return new List<UserNotEmailConfirmedDTO>();
+            var userNotEmailConfirmed = _userManager.Users.Where(u => ((u.EmailConfirmed == false) && (u.UrlEmailConfirmation != null))).Select(u => new UserNotEmailConfirmedDTO()
+            {
+                Email = u.Email,
+                UrlEmailConfirmed = u.UrlEmailConfirmation
+            }).ToList();
+
+            return userNotEmailConfirmed;
         }
 
-        public async Task<string> GetEmailConfirmationTokenAsync(string email)
-        {
-            var user = await GetUserWithEmailAsync(email);
-            var emailConfirmationToken = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-            return emailConfirmationToken;
-        }
+            public async Task<string> GetEmailConfirmationTokenAsync(string email)
+            {
+                var user = await GetUserWithEmailAsync(email);
+                var emailConfirmationToken = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                return emailConfirmationToken;
+            }
 
-     
+            public async Task DeleteUrlEmailConfirmationWithEmailAsync(List<string> emails)
+            {
+                foreach (var email in emails)
+                {
+                    var user = await GetUserWithEmailAsync(email);
+                    user.UrlEmailConfirmation = null;
+                    await UpdateUserAsync(user);
+                }
+            }
 
-        public async Task<ApplicationUser> GetUserWithEmailAsync(string email)
-        {
-            return await _userManager.FindByEmailAsync(email);
-        }
 
-        public async Task UpdateUserAsync(ApplicationUser user)
-        {
-            
-            await _userManager.UpdateAsync(user);
-        }
+            public async Task<ApplicationUser> GetUserWithEmailAsync(string email)
+            {
+                return await _userManager.FindByEmailAsync(email);
+            }
 
-        public async Task SignOutAsync()
-        {
-           await _signInManager.SignOutAsync();
+            public async Task UpdateUserAsync(ApplicationUser user)
+            {
+
+                await _userManager.UpdateAsync(user);
+            }
+
+            public async Task SignOutAsync()
+            {
+                await _signInManager.SignOutAsync();
+            }
         }
     }
-}

@@ -21,6 +21,7 @@ namespace PhoneBook.Application.InterfaceServices
         Task<IdentityResult> ChangePasswordAsync(ChangepasswordDTO changepasswordDTO);
         List<UserNotEmailConfirmedDTO> GetUsersNotEmailConfirmed();
         Task<string> GetEmailConfirmationTokenAsync(string email);
+        Task DeleteUrlEmailConfirmationWithEmailAsync(List<string> emails);
         Task<ApplicationUser> GetUserWithEmailAsync(string email);
         Task UpdateUserAsync(ApplicationUser user);
         Task SignOutAsync();

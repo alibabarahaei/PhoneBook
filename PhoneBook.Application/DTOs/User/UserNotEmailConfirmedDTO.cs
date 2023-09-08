@@ -8,7 +8,7 @@ namespace PhoneBook.Application.DTOs.User
 {
     public class UserNotEmailConfirmedDTO
     {
-        public string Url { get; set; }
+        public string UrlEmailConfirmed { get; set; }
         public string Email { get; set; }
     }
 }

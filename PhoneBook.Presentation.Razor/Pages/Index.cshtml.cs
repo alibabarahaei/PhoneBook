@@ -23,7 +23,7 @@ namespace PhoneBook.Presentation.Razor.Pages
 
         public async Task<RedirectToPageResult> OnGet()
         {
-
+          
             return RedirectToPage("ListContacts");
         }
         public async Task<RedirectToPageResult> ConfirmEmailOnGet()

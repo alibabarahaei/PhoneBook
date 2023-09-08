@@ -7,24 +7,27 @@ using PhoneBook.Domain.Models.User;
 using PhoneBook.Domain.InterfaceRepositories.Base;
 using PhoneBook.Domain.Models.Contacts;
 using Microsoft.EntityFrameworkCore;
+using PhoneBook.Application.Models;
 using PhoneBook.Infrastructure.EFCore.Context;
+using Microsoft.Extensions.Options;
+using System.Text.Encodings.Web;
 
 namespace PhoneBook.WorkerService.SendEmail
 {
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
-        private readonly IMessageSender _messageSender;
         private readonly IServiceProvider _serviceProvider;
+        //private readonly EmailInformationModel? _EmailInformationOptions;
+        private readonly IMessageSender _messageSender;
+        private static string subjectEmail = "Confirm your email";
 
-
-        public Worker(ILogger<Worker> logger, IMessageSender messageSender, IServiceProvider serviceProvider)
+        public Worker(ILogger<Worker> logger, IServiceProvider serviceProvider, IMessageSender messageSender)
         {
             _logger = logger;
-            _messageSender = messageSender;
             _serviceProvider = serviceProvider;
+            _messageSender = messageSender;
         }
-
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             while (!stoppingToken.IsCancellationRequested)
@@ -34,10 +37,21 @@ namespace PhoneBook.WorkerService.SendEmail
                 {
 
                     var userService = scope.ServiceProvider.GetRequiredService<UserService>();
-                    var emailSender = scope.ServiceProvider.GetRequiredService<MessageSender>();
+                    var usersNotEmailConfirmed = userService.GetUsersNotEmailConfirmed();
+                    if (usersNotEmailConfirmed != null)
+                    {
+                        var listEmailSendConfirmation = new List<string>();
 
-                    //var nana = await ctx.IsUserNameInUseAsync("alibabarahaei4");
-                    //var x = ctx.Users.AsQueryable().Where(u => u.EmailConfirmed == false).ToList();
+                        foreach (var u in usersNotEmailConfirmed)
+                        {
+                            _messageSender.SendEmail(u.Email, "Confirm your email",
+                                $"Please confirm your account by <a href='{u.UrlEmailConfirmed}'>clicking here</a>.",
+                                true);
+                            listEmailSendConfirmation.Add(u.Email);
+                        }
+
+                        await userService.DeleteUrlEmailConfirmationWithEmailAsync(listEmailSendConfirmation);
+                    }
                     _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
 
                 }
