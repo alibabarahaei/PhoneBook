@@ -57,14 +57,14 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
                     if (result.IsLockedOut)
                     {
                         TempData["WarningMessage"] = "اکانت شما تا اطلاع ثانوی قفل شده است";
-                        //ModelState.AddModelError("UserName", "اکانت شما تا اطلاع ثانوی قفل شده است");
+                        ModelState.AddModelError("LoginViewModel.Password", "اکانت شما تا اطلاع ثانوی قفل شده است");
                     }
                     else
                     {
                         TempData["WarningMessage"] = "نام کاربری یا رمز عبور اشتباه هست";
                         LoginViewModel.UserName = "";
                         LoginViewModel.RememberMe = false;
-                        //ModelState.AddModelError("UserName", "نام کاربری یا رمز عبور اشتباه هست");
+                        ModelState.AddModelError("LoginViewModel.Password", "نام کاربری یا رمز عبور اشتباه هست");
                     }
                     return Page();
                 }

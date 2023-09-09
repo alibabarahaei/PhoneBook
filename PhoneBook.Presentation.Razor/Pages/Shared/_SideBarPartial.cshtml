@@ -2,31 +2,33 @@
 
     <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
         <li class="nav-item">
-            <a  class="nav-link active py-3 border-bottom a-sidebar" aria-current="page"  asp-page="/ListContacts"
+            <a class="nav-link active py-3 border-bottom a-sidebar" aria-current="page" asp-page="/ListContacts"
                title="" data-bs-toggle="tooltip" data-bs-placement="right"
                data-bs-original-title="لیست مخاطبین">
                 <i class="bi bi-table i-sidebar"></i>
             </a>
         </li>
         <li>
-            <a  class="nav-link py-3 border-bottom a-sidebar" title="" data-bs-toggle="tooltip" asp-page="/AddContact"
+            <a class="nav-link py-3 border-bottom a-sidebar" title="" data-bs-toggle="tooltip" asp-page="/AddContact"
                data-bs-placement="right" data-bs-original-title="افزودن مخاطب">
                 <i class="bi bi-telephone-plus-fill i-sidebar"></i>
             </a>
         </li>
         <li>
-            <a  class="nav-link py-3 border-bottom a-sidebar" title="" data-bs-toggle="tooltip" asp-page="/Profile/EditProfile"
-                data-bs-placement="right" data-bs-original-title="پروفایل">
+            <a class="nav-link py-3 border-bottom a-sidebar" title="" data-bs-toggle="tooltip" asp-page="/Profile/EditProfile"
+               data-bs-placement="right" data-bs-original-title="پروفایل">
                 <i class="bi bi-person-fill i-sidebar"></i>
             </a>
         </li>
         <li>
-            <a  class="nav-link py-3 border-bottom a-sidebar" title="" data-bs-toggle="tooltip" asp-page="/Account/Logout" asp-area="Identity"
-                data-bs-placement="right" data-bs-original-title="خروج از حساب">
-                <i class="bi bi-box-arrow-right i-sidebar"></i>
-            </a>
+            <form method="Post" asp-page="/Account/Logout" asp-area="Identity">
+                <button class="nav-link py-3 border-bottom a-sidebar" title="" data-bs-toggle="tooltip"
+                        data-bs-placement="right" data-bs-original-title="خروج از حساب" style="width:72px">
+                    <i class="bi bi-box-arrow-right i-sidebar"></i>
+                </button>
+            </form>
         </li>
 
     </ul>
-  
+
 </div>

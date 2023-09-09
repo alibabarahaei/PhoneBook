@@ -2,3 +2,27 @@
 @model PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account.ConfirmEmailModel
 @{
 }
+
+<div class="container" style="height: 100vh;">
+    <div class="row justify-content-center align-items-center ">
+        <div class="col-md-6 col-lg-5 col-xl-4 row-main-page ">
+            <div class="row text_align_center mb-4 mt-4">
+                <h3>@ViewData["result"]</h3>
+            </div>
+            <div class="row">
+                <form method="Post">
+                    <div class="row justify-content-between">
+                        <div class="mb-2 col-12 text_align_center justify-content-center">
+                        </div>
+                        <div class="row justify-content-center align-items-center">
+
+                            <a class="btn" asp-area="Identity" asp-page="Login">
+                                 صفحه ورود
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

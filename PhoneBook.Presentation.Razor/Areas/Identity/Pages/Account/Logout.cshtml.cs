@@ -20,8 +20,8 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
         #endregion
 
 
-
-        public async Task<RedirectToPageResult> OnGet()
+        [ValidateAntiForgeryToken]
+        public async Task<RedirectToPageResult> OnPost()
         {
             await _userService.SignOutAsync();
             return RedirectToPage("Login");

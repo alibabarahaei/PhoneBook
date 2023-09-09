@@ -20,7 +20,7 @@ namespace PhoneBook.WorkerService.SendEmail
         private readonly IServiceProvider _serviceProvider;
         //private readonly EmailInformationModel? _EmailInformationOptions;
         private readonly IMessageSender _messageSender;
-        private static string subjectEmail = "Confirm your email";
+        
 
         public Worker(ILogger<Worker> logger, IServiceProvider serviceProvider, IMessageSender messageSender)
         {

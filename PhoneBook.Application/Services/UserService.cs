@@ -157,7 +157,7 @@ namespace PhoneBook.Application.Services
                 {
                     var user = await GetUserWithEmailAsync(email);
                     user.UrlEmailConfirmation = null;
-                    await UpdateUserAsync(user);
+                     await UpdateUserAsync(user);
                 }
             }
 
@@ -167,10 +167,16 @@ namespace PhoneBook.Application.Services
                 return await _userManager.FindByEmailAsync(email);
             }
 
-            public async Task UpdateUserAsync(ApplicationUser user)
+            public async Task<IdentityResult> UpdateUserAsync(ApplicationUser user)
             {
 
-                await _userManager.UpdateAsync(user);
+               return  await _userManager.UpdateAsync(user);
+            }
+
+            public async Task<IdentityResult> ConfirmEmailAsync(ApplicationUser user, string code)
+            {
+                 return await _userManager.ConfirmEmailAsync(user, code);
+
             }
 
             public async Task SignOutAsync()

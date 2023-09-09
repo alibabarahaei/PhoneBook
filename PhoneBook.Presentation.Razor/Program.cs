@@ -50,7 +50,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     {
         options.Password.RequireNonAlphanumeric = false;
         options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
-       //TODO options.SignIn.RequireConfirmedEmail
+        options.SignIn.RequireConfirmedEmail=true;
     })
     .AddEntityFrameworkStores<PhoneBookDbContext>()
     .AddDefaultTokenProviders()

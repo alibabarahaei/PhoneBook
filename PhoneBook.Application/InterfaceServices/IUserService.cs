@@ -12,7 +12,6 @@ namespace PhoneBook.Application.InterfaceServices
         Task<IdentityResult> RegisterUserAsync(RegisterUserDTO registerUserDTO);
         Task<IdentityUser> IsUserNameInUseAsync(string userName);
         Task<SignInResult> LoginUserAsync(LoginUserDTO loginUserDTO);
-        Task LogOutUserAsync();
         Task<IdentityResult> EditProfileAsync(EditProfileDTO editProfileDTO);
         Task<ApplicationUser> GetUserWithClaimsPrincipalAsync(ClaimsPrincipal claimsPrincipal);
         Task<ApplicationUser> GetUserWithUserIdAsync(string userId);
@@ -23,7 +22,8 @@ namespace PhoneBook.Application.InterfaceServices
         Task<string> GetEmailConfirmationTokenAsync(string email);
         Task DeleteUrlEmailConfirmationWithEmailAsync(List<string> emails);
         Task<ApplicationUser> GetUserWithEmailAsync(string email);
-        Task UpdateUserAsync(ApplicationUser user);
+        Task<IdentityResult> UpdateUserAsync(ApplicationUser user);
+        Task<IdentityResult> ConfirmEmailAsync(ApplicationUser user, string code);
         Task SignOutAsync();
     }
 }
