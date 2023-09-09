@@ -27,6 +27,7 @@ namespace PhoneBook.Infrastructure.EFCore.Context
             {
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;
             }
+          
             base.OnModelCreating(modelBuilder);
             #region ChangeTableName(Identity)
             modelBuilder.Entity<ApplicationUser>().ToTable("Users").Property(p => p.Id).HasColumnName("UserId");

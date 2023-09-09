@@ -23,10 +23,9 @@ IHost host = Host.CreateDefaultBuilder(args)
         services.AddIdentity<ApplicationUser, IdentityRole>()
             .AddEntityFrameworkStores<PhoneBookDbContext>();
 
-
-
+        services.Configure<EmailInformationModel>(hostContext.Configuration.GetSection("Gmail"));
+        services.Configure<ConfigWorkerServiceModel>(hostContext.Configuration.GetSection("ConfigWorkerService"));
         //services.AddIdentityCore<ApplicationUser>().AddEntityFrameworkStores<PhoneBookDbContext>();
-        //services.Configure<EmailInformationModel>(hostContext.Configuration.GetSection("Gmail"));
 
         services.AddScoped<UserService>();
 

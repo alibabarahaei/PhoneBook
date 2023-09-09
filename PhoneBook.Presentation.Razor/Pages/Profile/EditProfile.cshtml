@@ -23,15 +23,15 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="userinput1">نام</label>
-                                <input type="text" id="userinput1" class="form-control border-primary" asp-for="FirstName">
-                                <span asp-validation-for="FirstName" class="text-danger" style="font-size: 13px"></span>
+                                <input type="text" id="userinput1" class="form-control border-primary" asp-for="editProfileViewModel.FirstName">
+                                <span asp-validation-for="editProfileViewModel.FirstName" class="text-danger" style="font-size: 13px"></span>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="userinput2">نام خانوادگی</label>
-                                <input type="text" id="userinput2" class="form-control border-primary" asp-for="LastName">
-                                <span asp-validation-for="LastName" class="text-danger" style="font-size: 13px"></span>
+                                <input type="text" id="userinput2" class="form-control border-primary" asp-for="editProfileViewModel.LastName">
+                                <span asp-validation-for="editProfileViewModel.LastName" class="text-danger" style="font-size: 13px"></span>
                             </div>
                         </div>
                     </div>
@@ -40,29 +40,29 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="userinput3">موبایل</label>
-                                <input type="text" id="userinput3" class="form-control border-primary" asp-for="PhoneNumber">
-                                <span asp-validation-for="PhoneNumber" class="text-danger" style="font-size: 13px"></span>
+                                <input type="text" id="userinput3" class="form-control border-primary" asp-for="editProfileViewModel.PhoneNumber">
+                                <span asp-validation-for="editProfileViewModel.PhoneNumber" class="text-danger" style="font-size: 13px"></span>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="userinput4" asp-for="Gender">جنسیت</label>
-                                <select id="userinput4"  class="form-control  border-primary" asp-for="Gender">
+                                <label for="userinput4" asp-for="editProfileViewModel.Gender">جنسیت</label>
+                                <select id="userinput4" class="form-control  border-primary" asp-for="editProfileViewModel.Gender">
                                     
-                                    <option Selected="@(Model.Gender == 'U')" ></option>
-                                    <option Selected="@(Model.Gender == 'M')" value='M'>آقا</option>
-                                    <option Selected="@(Model.Gender == 'W')" value='W'>خانم</option>
+                                    <option Selected="@(Model.editProfileViewModel.Gender == 'U')"></option>
+                                    <option Selected="@(Model.editProfileViewModel.Gender == 'M')" value='M'>آقا</option>
+                                    <option Selected="@(Model.editProfileViewModel.Gender == 'W')" value='W'>خانم</option>
 
                                 </select>
-                                <span asp-validation-for="Gender" class="text-danger" style="font-size: 13px"></span>
+                                <span asp-validation-for="editProfileViewModel.Gender" class="text-danger" style="font-size: 13px"></span>
                             </div>
                         </div>
                     </div>
                     <div class="row my-3">
                         <div class="col ">
-                            @if (@Model.PathProfileImageBefore != null)
+                            @if (@Model.editProfileViewModel.PathProfileImageBefore != null)
                             {
-                            <img src="@(SD.UserProfileThumb+@Model.PathProfileImageBefore)" class="rounded-circle width-50  mx-auto d-block" alt="user image">
+                                <img src="@(SD.UserProfileThumb+@Model.editProfileViewModel.PathProfileImageBefore)" class="rounded-circle width-50  mx-auto d-block" alt="user image">
                             }
                         </div>
                     </div>
@@ -72,10 +72,10 @@
                             <label for="images" class="drop-container" id="dropcontainer">
                                 <span class="drop-title">تصویر را رها کنید</span>
                                 یا
-                                <input type="file" id="images" accept="image/*"  asp-for="ProfileImage">
+                                <input type="file" id="images" accept="image/*" asp-for="editProfileViewModel.ProfileImage">
 
                             </label>
-                            <span asp-validation-for="ProfileImage" class="text-danger" style="font-size: 13px"></span>
+                            <span asp-validation-for="editProfileViewModel.ProfileImage" class="text-danger" style="font-size: 13px"></span>
                         </div>
 
                     </div>
@@ -85,9 +85,9 @@
                 </div>
 
                 <div class="form-actions left mt-5">
-                    <button type="button" class="btn btn-danger mr-1">
+                    <a asp-page="../ListContacts" class="btn btn-danger mr-1">
                         <i class="bi bi-trash me-1"></i> لغو
-                    </button>
+                    </a>
                     <button type="submit" class="btn btn-success">
                         <i class="bi bi-save-fill me-1"></i> ذخیره
                     </button>

@@ -1,10 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using PhoneBook.Application.DTOs.User;
 using PhoneBook.Application.InterfaceServices;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
+using AutoMapper;
+using PhoneBook.Application.DTOs.Account;
+using PhoneBook.Presentation.Razor.Extensions;
+using PhoneBook.Presentation.Razor.Pages.ViewModels;
 
 namespace PhoneBook.Presentation.Razor.Pages.Profile
 {
@@ -14,47 +17,20 @@ namespace PhoneBook.Presentation.Razor.Pages.Profile
     {
 
         #region properties
-
-        [Display(Name = "نام")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        [MaxLength(200, ErrorMessage = "{0} نمی تواند بیشتر از {1} کاراکتر باشد")]
-        public string FirstName { get; set; }
-
-
-        [Display(Name = "نام خانوادگی")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        [MaxLength(200, ErrorMessage = "{0} نمی تواند بیشتر از {1} کاراکتر باشد")]
-        public string LastName { get; set; }
-
-
-        [Display(Name = "شَماره موبایل")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        [MaxLength(200, ErrorMessage = "{0} نمی تواند بیشتر از {1} عدد باشد")]
-        [DataType("Number")]
-        public string PhoneNumber { get; set; }
-
-        [Display(Name = "جنسیت")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        public char Gender { get; set; }
-
-        public string? PathProfileImageBefore { get; set; }
-
-        [Display(Name = "تصویر پروفایل")]
-        
-        public IFormFile? ProfileImage { get; set; }
+        public EditProfileViewModel editProfileViewModel { get; set; }
 
         #endregion
 
         #region constructor
 
         private readonly IUserService _userService;
+        private readonly IMapper _mapper;
 
-
-        public EditProfileModel(IUserService userService)
+        public EditProfileModel(IUserService userService, IMapper mapper)
         {
-
             _userService = userService;
-
+            _mapper = mapper;
+            editProfileViewModel = new EditProfileViewModel();
         }
 
 
@@ -68,14 +44,12 @@ namespace PhoneBook.Presentation.Razor.Pages.Profile
         public async Task OnGet()
         {
 
-
-            var user = await _userService.GetUserWithClaimsPrincipalAsync(User);  //TODO
-            ;
-            FirstName = user.FirstName;
-            LastName = user.LastName;
-            PhoneNumber = user.PhoneNumber;
-            PathProfileImageBefore = user.PathProfileImage;
-            Gender = user.Gender ?? 'U';
+            var user = await _userService.GetUserWithUserIdAsync(User.GetUserId());  //TODO
+            editProfileViewModel.FirstName=user.FirstName;
+            editProfileViewModel.LastName=user.LastName;
+            editProfileViewModel.PhoneNumber=user.PhoneNumber;
+            editProfileViewModel.PathProfileImageBefore = user.PathProfileImage;
+            editProfileViewModel.Gender = user.Gender ?? 'U';
 
         }
 
@@ -91,15 +65,8 @@ namespace PhoneBook.Presentation.Razor.Pages.Profile
             {
                 if (User.Identity.IsAuthenticated)
                 {
-                    var newUser = new EditProfileDTO()
-                    {
-                        FirstName = FirstName,
-                        LastName = LastName,
-                        PhoneNumber = PhoneNumber,
-                        User = User,
-                        Gender = Gender,
-                        ProfileImage = ProfileImage
-                    };
+                    var newUser=_mapper.Map<EditProfileDTO>(editProfileViewModel);
+                    newUser.UserId = User.GetUserId();
                     var result = await _userService.EditProfileAsync(newUser);
 
                     if (result.Succeeded)
@@ -110,9 +77,9 @@ namespace PhoneBook.Presentation.Razor.Pages.Profile
                     else
                     {
                         TempData["WarningMessage"] = "خطا";
-                        FirstName = null;
-                        LastName = null;
-                        PhoneNumber = null;
+                        editProfileViewModel.FirstName = null;
+                        editProfileViewModel.LastName = null;
+                        editProfileViewModel.PhoneNumber = null;
                         return RedirectToPage("~/ListContacts");
                     }
 

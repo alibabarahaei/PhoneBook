@@ -26,7 +26,7 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
             if (email == null || code == null)
             {
                 ViewData["result"] = "لینک خراب است";
-                ViewData["WarningMessage"] = "لینک خراب است";
+                TempData["WarningMessage"] = "لینک خراب است";
             }
             else
             {
@@ -34,7 +34,7 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
                 if (user == null)
                 {
                     ViewData["result"] = "ایمیل مورد نظر پیدا نشد";
-                    ViewData["WarningMessage"] = "ایمیل مورد نظر پیدا نشد";
+                    TempData["WarningMessage"] = "ایمیل مورد نظر پیدا نشد";
                 }
                 else
                 {
@@ -43,12 +43,12 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
                     if (result.Succeeded)
                     {
                         ViewData["result"] ="ایمیل با موفقیت تایید شد";
-                        ViewData["SuccessMessage"] = "ایمیل با موفقیت تایید شد";
+                        TempData["SuccessMessage"] = "ایمیل با موفقیت تایید شد";
                     }
                     else
                     {
                         ViewData["result"] = "ایمیل  تایید نشد";
-                        ViewData["WarningMessage"] = "ایمیل  تایید نشد";
+                        TempData["WarningMessage"] = "ایمیل  تایید نشد";
                     }
                     
                 }

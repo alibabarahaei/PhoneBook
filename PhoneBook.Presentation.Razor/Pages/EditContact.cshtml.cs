@@ -2,13 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PhoneBook.Application.DTOs.Contact;
-using PhoneBook.Application.DTOs.User;
 using PhoneBook.Application.InterfaceServices;
-using PhoneBook.Application.Services;
-using PhoneBook.Domain.Models.Contacts;
 using PhoneBook.Presentation.Razor.Pages.ViewModels;
-using System.ComponentModel.DataAnnotations;
-using System.Xml.Linq;
 using AutoMapper;
 using PhoneBook.Presentation.Razor.Extensions;
 

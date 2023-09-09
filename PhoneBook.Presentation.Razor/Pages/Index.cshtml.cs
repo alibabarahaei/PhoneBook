@@ -2,9 +2,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using PhoneBook.Application.DTOs.User;
-using PhoneBook.Application.InterfaceServices;
-using PhoneBook.Domain.Models.User;
 
 namespace PhoneBook.Presentation.Razor.Pages
 {

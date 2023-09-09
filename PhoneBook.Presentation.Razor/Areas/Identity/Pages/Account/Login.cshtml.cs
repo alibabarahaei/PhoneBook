@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PhoneBook.Application.DTOs.Account;
-using PhoneBook.Application.DTOs.User;
+
 using PhoneBook.Application.InterfaceServices;
 using PhoneBook.Domain.Models.User;
 using PhoneBook.Presentation.Razor.Areas.Identity.Pages.ViewModels;
@@ -59,6 +59,11 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
                         TempData["WarningMessage"] = "اکانت شما تا اطلاع ثانوی قفل شده است";
                         ModelState.AddModelError("LoginViewModel.Password", "اکانت شما تا اطلاع ثانوی قفل شده است");
                     }
+                    else if (result.IsNotAllowed)
+                    {
+                        TempData["WarningMessage"] = "ایمیل خود را تایید کنید";
+                        ModelState.AddModelError("LoginViewModel.Password", "ایمیل خود را تایید کنید");
+                    }
                     else
                     {
                         TempData["WarningMessage"] = "نام کاربری یا رمز عبور اشتباه هست";
@@ -68,7 +73,7 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
                     }
                     return Page();
                 }
-                TempData["SuccessMessage"] = "با موفقیت ثبت نام شدید";
+                TempData["SuccessMessage"] = "با موفقیت وارد شدید";
                 return RedirectToPage("../Index");
             }
             return Page();

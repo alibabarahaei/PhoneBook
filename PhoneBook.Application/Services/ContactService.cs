@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using PhoneBook.Application.DTOs.Contact;
 using PhoneBook.Application.DTOs.Paging;
-using PhoneBook.Application.DTOs.User;
 using PhoneBook.Application.Extensions;
 using PhoneBook.Application.InterfaceServices;
 using PhoneBook.Application.Utilities;
@@ -64,7 +63,8 @@ namespace PhoneBook.Application.Services
 
         public async Task<ContactResult> DeleteContactAsync(DeleteContactDTO deleteContactDTO)
         {
-            var contact = await _contactRepository.GetEntityById(deleteContactDTO.ContactId);
+            var contact = await _contactRepository.GetQuery().Include(c=>c.User).FirstOrDefaultAsync();
+                
             if (contact != null && contact.User.Id == deleteContactDTO.UserId)
             {
                  _contactRepository.DeletePermanent(contact);

@@ -1,16 +1,8 @@
+using Microsoft.Extensions.Options;
 using Microsoft.VisualBasic;
 using PhoneBook.Application.InterfaceServices;
 using PhoneBook.Application.Services;
-using System.IO;
-using Microsoft.AspNetCore.Identity;
-using PhoneBook.Domain.Models.User;
-using PhoneBook.Domain.InterfaceRepositories.Base;
-using PhoneBook.Domain.Models.Contacts;
-using Microsoft.EntityFrameworkCore;
 using PhoneBook.Application.Models;
-using PhoneBook.Infrastructure.EFCore.Context;
-using Microsoft.Extensions.Options;
-using System.Text.Encodings.Web;
 
 namespace PhoneBook.WorkerService.SendEmail
 {
@@ -18,15 +10,15 @@ namespace PhoneBook.WorkerService.SendEmail
     {
         private readonly ILogger<Worker> _logger;
         private readonly IServiceProvider _serviceProvider;
-        //private readonly EmailInformationModel? _EmailInformationOptions;
         private readonly IMessageSender _messageSender;
-        
+        private readonly ConfigWorkerServiceModel _configworkerService;
 
-        public Worker(ILogger<Worker> logger, IServiceProvider serviceProvider, IMessageSender messageSender)
+        public Worker(ILogger<Worker> logger, IServiceProvider serviceProvider, IMessageSender messageSender, IOptions<ConfigWorkerServiceModel> configworkerService)
         {
             _logger = logger;
             _serviceProvider = serviceProvider;
             _messageSender = messageSender;
+            _configworkerService = configworkerService.Value;
         }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
@@ -58,7 +50,7 @@ namespace PhoneBook.WorkerService.SendEmail
 
 
 
-                await Task.Delay(3000, stoppingToken);
+                await Task.Delay(_configworkerService.Timer, stoppingToken);
             }
         }
     }

@@ -35,6 +35,7 @@ namespace PhoneBook.Application.Mapper
             CreateMap<Contact, AddContactDTO>().ReverseMap();
             CreateMap<ApplicationUser, RegisterUserDTO>().ReverseMap();
             CreateMap<Contact, EditContactDTO>().ReverseMap();
+            CreateMap<ApplicationUser, EditProfileDTO>().ReverseMap();
         }
     }
 }

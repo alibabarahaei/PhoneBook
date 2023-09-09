@@ -2,12 +2,10 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using PhoneBook.Application.InterfaceServices;
 using PhoneBook.Application.Models;
 using PhoneBook.Application.Security.Identity;
 using PhoneBook.Application.Services;
-using PhoneBook.Application.Utilities;
 using PhoneBook.Domain.InterfaceRepositories.Base;
 using PhoneBook.Domain.Models.User;
 using PhoneBook.Infrastructure.EFCore.Context;
@@ -75,8 +73,6 @@ builder.Services.ConfigureApplicationCookie(options =>
 #endregion
 
 
-
-
 #region MyRegion
 
 builder.Services.Configure<EmailInformationModel>(builder.Configuration.GetSection("Gmail"));
@@ -89,11 +85,11 @@ builder.Services.Configure<StorePathModel>(builder.Configuration.GetSection("Sto
 
 
 
-builder.Services.AddSingleton<HtmlEncoder>(HtmlEncoder.Create(allowedRanges: new[] { UnicodeRanges.BasicLatin, UnicodeRanges.Arabic }));
 
 
 #region Services
 
+builder.Services.AddSingleton<HtmlEncoder>(HtmlEncoder.Create(allowedRanges: new[] { UnicodeRanges.BasicLatin, UnicodeRanges.Arabic }));
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IContactService, ContactService>();

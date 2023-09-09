@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using PhoneBook.Application.DTOs.Account;
-using PhoneBook.Application.DTOs.User;
 using PhoneBook.Domain.Models.User;
 using System.Security.Claims;
 

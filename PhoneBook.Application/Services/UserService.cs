@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using PhoneBook.Application.DTOs.Account;
-using PhoneBook.Application.DTOs.User;
 using PhoneBook.Application.Extensions;
 using PhoneBook.Application.InterfaceServices;
 using PhoneBook.Application.Utilities;
@@ -82,7 +81,7 @@ namespace PhoneBook.Application.Services
 
         public async Task<IdentityResult> EditProfileAsync(EditProfileDTO editProfileDTO)
         {
-            var currentUser = await _userManager.GetUserAsync(editProfileDTO.User);
+            var currentUser = await GetUserWithUserIdAsync(editProfileDTO.UserId);
             currentUser.FirstName = editProfileDTO.FirstName;
             currentUser.LastName = editProfileDTO.LastName;
             currentUser.PhoneNumber = editProfileDTO.PhoneNumber;
@@ -144,44 +143,44 @@ namespace PhoneBook.Application.Services
             return userNotEmailConfirmed;
         }
 
-            public async Task<string> GetEmailConfirmationTokenAsync(string email)
+        public async Task<string> GetEmailConfirmationTokenAsync(string email)
+        {
+            var user = await GetUserWithEmailAsync(email);
+            var emailConfirmationToken = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            return emailConfirmationToken;
+        }
+
+        public async Task DeleteUrlEmailConfirmationWithEmailAsync(List<string> emails)
+        {
+            foreach (var email in emails)
             {
                 var user = await GetUserWithEmailAsync(email);
-                var emailConfirmationToken = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                return emailConfirmationToken;
-            }
-
-            public async Task DeleteUrlEmailConfirmationWithEmailAsync(List<string> emails)
-            {
-                foreach (var email in emails)
-                {
-                    var user = await GetUserWithEmailAsync(email);
-                    user.UrlEmailConfirmation = null;
-                     await UpdateUserAsync(user);
-                }
-            }
-
-
-            public async Task<ApplicationUser> GetUserWithEmailAsync(string email)
-            {
-                return await _userManager.FindByEmailAsync(email);
-            }
-
-            public async Task<IdentityResult> UpdateUserAsync(ApplicationUser user)
-            {
-
-               return  await _userManager.UpdateAsync(user);
-            }
-
-            public async Task<IdentityResult> ConfirmEmailAsync(ApplicationUser user, string code)
-            {
-                 return await _userManager.ConfirmEmailAsync(user, code);
-
-            }
-
-            public async Task SignOutAsync()
-            {
-                await _signInManager.SignOutAsync();
+                user.UrlEmailConfirmation = null;
+                await UpdateUserAsync(user);
             }
         }
+
+
+        public async Task<ApplicationUser> GetUserWithEmailAsync(string email)
+        {
+            return await _userManager.FindByEmailAsync(email);
+        }
+
+        public async Task<IdentityResult> UpdateUserAsync(ApplicationUser user)
+        {
+
+            return await _userManager.UpdateAsync(user);
+        }
+
+        public async Task<IdentityResult> ConfirmEmailAsync(ApplicationUser user, string code)
+        {
+            return await _userManager.ConfirmEmailAsync(user, code);
+
+        }
+
+        public async Task SignOutAsync()
+        {
+            await _signInManager.SignOutAsync();
+        }
     }
+}

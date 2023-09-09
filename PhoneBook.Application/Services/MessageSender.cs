@@ -6,12 +6,23 @@ using System.Net;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using PhoneBook.Application.Models;
+using Microsoft.Extensions.Options;
 
 namespace PhoneBook.Application.Services
 {
 
     public class MessageSender : IMessageSender
     {
+
+        private readonly EmailInformationModel _EmailInformationOptions;
+
+
+        public MessageSender(IOptions<EmailInformationModel> emailInformationOptions)
+        {
+            _EmailInformationOptions = emailInformationOptions.Value;
+        }
+
 
         public void SendEmail(string toEmail, string subject, string message, bool isMessageHtml = false)
         {
@@ -21,8 +32,8 @@ namespace PhoneBook.Application.Services
 
                 var credentials = new NetworkCredential()
                 {
-                    UserName = "unknown.2380.unknown@gmail.com", // without @gmail.com
-                    Password = "fazrsirrcjfqnyop"
+                    UserName = _EmailInformationOptions.Address, // without @gmail.com
+                    Password = _EmailInformationOptions.Password
                 };
                 client.UseDefaultCredentials = false;
                 client.Credentials = credentials;

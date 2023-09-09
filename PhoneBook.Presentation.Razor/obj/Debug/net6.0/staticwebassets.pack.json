@@ -17,12 +17,24 @@
       "PackagePath": "staticwebassets\\contact\\images\\1825789266ba4c16923a75ec734a460e.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\263d8789ce244c68b0f9100ca7048649.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\263d8789ce244c68b0f9100ca7048649.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\2ab27d50b73d4ed9878c1ec51e3b5eb0.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\2ab27d50b73d4ed9878c1ec51e3b5eb0.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\358270fa285541fb820a65d9ea78b30a.png",
       "PackagePath": "staticwebassets\\contact\\images\\358270fa285541fb820a65d9ea78b30a.png"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\3ee75888dfb3401ab61e58a7066ca05f.png",
       "PackagePath": "staticwebassets\\contact\\images\\3ee75888dfb3401ab61e58a7066ca05f.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\61ffca065b4b4b63bdbde2989f58d296.png",
+      "PackagePath": "staticwebassets\\contact\\images\\61ffca065b4b4b63bdbde2989f58d296.png"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\6d90d07e821c4be8a20da8c4d3691630.jpg",
@@ -69,6 +81,10 @@
       "PackagePath": "staticwebassets\\contact\\images\\f0402539dfe14205b18be3caf6523a4f.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\f469d6de2158491bbc3245959abe7deb.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\f469d6de2158491bbc3245959abe7deb.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\f86edc646461401b928ca45128ee319c.jpg",
       "PackagePath": "staticwebassets\\contact\\images\\f86edc646461401b928ca45128ee319c.jpg"
     },
@@ -87,6 +103,14 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\1825789266ba4c16923a75ec734a460e.jpg",
       "PackagePath": "staticwebassets\\contact\\images\\thumb\\1825789266ba4c16923a75ec734a460e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\263d8789ce244c68b0f9100ca7048649.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\263d8789ce244c68b0f9100ca7048649.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\2ab27d50b73d4ed9878c1ec51e3b5eb0.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\2ab27d50b73d4ed9878c1ec51e3b5eb0.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\2e162a44b22243a4861cad6deab854a9.jpg",
@@ -119,6 +143,10 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\57b8b421437c4dd897e3c3c32741fd29.jpg",
       "PackagePath": "staticwebassets\\contact\\images\\thumb\\57b8b421437c4dd897e3c3c32741fd29.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\61ffca065b4b4b63bdbde2989f58d296.png",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\61ffca065b4b4b63bdbde2989f58d296.png"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\6d90d07e821c4be8a20da8c4d3691630.jpg",
@@ -171,6 +199,10 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\f0402539dfe14205b18be3caf6523a4f.jpg",
       "PackagePath": "staticwebassets\\contact\\images\\thumb\\f0402539dfe14205b18be3caf6523a4f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\f469d6de2158491bbc3245959abe7deb.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\f469d6de2158491bbc3245959abe7deb.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\f86edc646461401b928ca45128ee319c.jpg",
@@ -321,12 +353,20 @@
       "PackagePath": "staticwebassets\\userprofile\\images\\b727131b50af438493fdfb1637138d3c.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\ea62ca0f7caf41398c3037a4f459884e.jpg",
+      "PackagePath": "staticwebassets\\userprofile\\images\\ea62ca0f7caf41398c3037a4f459884e.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\f718e4b95e9c41359a57af84372365e8.jpg",
       "PackagePath": "staticwebassets\\userprofile\\images\\f718e4b95e9c41359a57af84372365e8.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\thumb\\b727131b50af438493fdfb1637138d3c.jpg",
       "PackagePath": "staticwebassets\\userprofile\\images\\thumb\\b727131b50af438493fdfb1637138d3c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\thumb\\ea62ca0f7caf41398c3037a4f459884e.jpg",
+      "PackagePath": "staticwebassets\\userprofile\\images\\thumb\\ea62ca0f7caf41398c3037a4f459884e.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\thumb\\f718e4b95e9c41359a57af84372365e8.jpg",
