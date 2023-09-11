@@ -5,16 +5,40 @@
       "PackagePath": "staticwebassets\\PhoneBook.Presentation.Razor.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\1562703320b1470b931acb6f78e6ff52.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\1562703320b1470b931acb6f78e6ff52.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\529aedd674304e69b880f093672900e2.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\529aedd674304e69b880f093672900e2.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\5a98ac4e3a3c4db597fe6b9558a7ab72.jpg",
       "PackagePath": "staticwebassets\\contact\\images\\5a98ac4e3a3c4db597fe6b9558a7ab72.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\5b130e8ebd704f9dad1ede28e8ed3aae.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\5b130e8ebd704f9dad1ede28e8ed3aae.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\5cc3cc7c946042aca53b3f0f9f8fc8d6.jpg",
       "PackagePath": "staticwebassets\\contact\\images\\5cc3cc7c946042aca53b3f0f9f8fc8d6.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\5d7c9bc14eb84f538603e0cb7261b976.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\5d7c9bc14eb84f538603e0cb7261b976.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\70bd3dcbeb1b4ee19ab5b964ec16e09f.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\70bd3dcbeb1b4ee19ab5b964ec16e09f.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\92113579e7944e0abbf85bda21c420c4.jpg",
       "PackagePath": "staticwebassets\\contact\\images\\92113579e7944e0abbf85bda21c420c4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\95db579734834d0e944fead02d2c214b.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\95db579734834d0e944fead02d2c214b.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\a022c1fd8d6e433a8eed1dd3f9ccab06.jpg",
@@ -29,20 +53,48 @@
       "PackagePath": "staticwebassets\\contact\\images\\e96dd66a284343c69b748b880bc109d1.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\eba0aa4d54fc4c5b867cde3067a5fd7c.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\eba0aa4d54fc4c5b867cde3067a5fd7c.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\f7bc75f58d0e4526919c31a1a7d7e39b.jpg",
       "PackagePath": "staticwebassets\\contact\\images\\f7bc75f58d0e4526919c31a1a7d7e39b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\1562703320b1470b931acb6f78e6ff52.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\1562703320b1470b931acb6f78e6ff52.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\529aedd674304e69b880f093672900e2.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\529aedd674304e69b880f093672900e2.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\5a98ac4e3a3c4db597fe6b9558a7ab72.jpg",
       "PackagePath": "staticwebassets\\contact\\images\\thumb\\5a98ac4e3a3c4db597fe6b9558a7ab72.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\5b130e8ebd704f9dad1ede28e8ed3aae.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\5b130e8ebd704f9dad1ede28e8ed3aae.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\5cc3cc7c946042aca53b3f0f9f8fc8d6.jpg",
       "PackagePath": "staticwebassets\\contact\\images\\thumb\\5cc3cc7c946042aca53b3f0f9f8fc8d6.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\5d7c9bc14eb84f538603e0cb7261b976.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\5d7c9bc14eb84f538603e0cb7261b976.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\70bd3dcbeb1b4ee19ab5b964ec16e09f.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\70bd3dcbeb1b4ee19ab5b964ec16e09f.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\92113579e7944e0abbf85bda21c420c4.jpg",
       "PackagePath": "staticwebassets\\contact\\images\\thumb\\92113579e7944e0abbf85bda21c420c4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\95db579734834d0e944fead02d2c214b.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\95db579734834d0e944fead02d2c214b.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\a022c1fd8d6e433a8eed1dd3f9ccab06.jpg",
@@ -55,6 +107,10 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\e96dd66a284343c69b748b880bc109d1.jpg",
       "PackagePath": "staticwebassets\\contact\\images\\thumb\\e96dd66a284343c69b748b880bc109d1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\eba0aa4d54fc4c5b867cde3067a5fd7c.jpg",
+      "PackagePath": "staticwebassets\\contact\\images\\thumb\\eba0aa4d54fc4c5b867cde3067a5fd7c.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\contact\\images\\thumb\\f7bc75f58d0e4526919c31a1a7d7e39b.jpg",
@@ -201,6 +257,10 @@
       "PackagePath": "staticwebassets\\userprofile\\images\\38f81ddbbe994a38bb37d581804faa19.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\5cdc32d0a9ba4ffaa32e16780e64e502.jpg",
+      "PackagePath": "staticwebassets\\userprofile\\images\\5cdc32d0a9ba4ffaa32e16780e64e502.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\b727131b50af438493fdfb1637138d3c.jpg",
       "PackagePath": "staticwebassets\\userprofile\\images\\b727131b50af438493fdfb1637138d3c.jpg"
     },
@@ -215,6 +275,10 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\thumb\\38f81ddbbe994a38bb37d581804faa19.jpg",
       "PackagePath": "staticwebassets\\userprofile\\images\\thumb\\38f81ddbbe994a38bb37d581804faa19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\thumb\\5cdc32d0a9ba4ffaa32e16780e64e502.jpg",
+      "PackagePath": "staticwebassets\\userprofile\\images\\thumb\\5cdc32d0a9ba4ffaa32e16780e64e502.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\project\\PhoneBook\\PhoneBook.Presentation.Razor\\wwwroot\\userprofile\\images\\thumb\\b727131b50af438493fdfb1637138d3c.jpg",
