@@ -1,8 +1,7 @@
 using Microsoft.Extensions.Options;
-using Microsoft.VisualBasic;
 using PhoneBook.Application.InterfaceServices;
-using PhoneBook.Application.Services;
 using PhoneBook.Application.Models;
+using PhoneBook.Application.Services;
 
 namespace PhoneBook.WorkerService.SendEmail
 {
@@ -24,13 +23,11 @@ namespace PhoneBook.WorkerService.SendEmail
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-
                 using (var scope = _serviceProvider.CreateScope())
                 {
-
                     var userService = scope.ServiceProvider.GetRequiredService<UserService>();
                     var usersNotEmailConfirmed = userService.GetUsersNotEmailConfirmed();
-                    if (usersNotEmailConfirmed != null)
+                    if (usersNotEmailConfirmed.Count != 0)
                     {
                         var listEmailSendConfirmation = new List<string>();
 
@@ -45,11 +42,7 @@ namespace PhoneBook.WorkerService.SendEmail
                         await userService.DeleteUrlEmailConfirmationWithEmailAsync(listEmailSendConfirmation);
                     }
                     _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-
                 }
-
-
-
                 await Task.Delay(_configworkerService.Timer, stoppingToken);
             }
         }

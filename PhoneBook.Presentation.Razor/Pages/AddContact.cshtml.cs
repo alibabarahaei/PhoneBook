@@ -1,21 +1,15 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using PhoneBook.Application.DTOs.Contact;
 using PhoneBook.Application.InterfaceServices;
-using PhoneBook.Presentation.Razor.Pages.ViewModels;
-using System.ComponentModel.DataAnnotations;
-using System.Security.Claims;
-using System.Xml.Linq;
 using PhoneBook.Presentation.Razor.Extensions;
+using PhoneBook.Presentation.Razor.Pages.ViewModels;
 
 namespace PhoneBook.Presentation.Razor.Pages
 {
 
-    [Authorize]
-    [BindProperties]
-    public class AddContactModel : PageModel
+
+    public class AddContactModel : SiteBasePage
     {
 
 

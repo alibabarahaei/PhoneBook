@@ -24,6 +24,7 @@ public class BasePaging
     public int SkipEntity { get; set; }
 
     public int HowManyShowPageAfterAndBefore { get; set; }
+
     public BasePaging GetCurrentPaging()
     {
         return this;

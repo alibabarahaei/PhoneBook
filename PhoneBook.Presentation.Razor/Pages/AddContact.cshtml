@@ -3,6 +3,7 @@
 @using PhoneBook.Domain.Models.User
 @model PhoneBook.Presentation.Razor.Pages.AddContactModel
 @{
+    ViewData["Title"] = "AddContact";
 }
 <div class="card">
     <div class="card-header">
@@ -47,7 +48,7 @@
                             <div class="form-group">
                                 <label for="userinput4" asp-for="@Model.AddContactViewModel.Gender">جنسیت</label>
                                 <select id="userinput4" class="form-control  border-primary" asp-for="@Model.AddContactViewModel.Gender">
-                                    
+
                                     <option value="U"></option>
                                     <option value='M'>آقا</option>
                                     <option value='W'>خانم</option>
@@ -57,7 +58,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-12">
                             <label>بارگزاری تصویر مخاطب</label>
@@ -69,13 +70,13 @@
                             </label>
                             <span asp-validation-for="@Model.AddContactViewModel.ContactImage" class="text-danger" style="font-size: 13px"></span>
                         </div>
-                      
+
                     </div>
 
 
 
                 </div>
-                
+
                 <div class="form-actions left mt-5">
                     <a asp-page="../ListContacts" class="btn btn-danger mr-1">
                         <i class="bi bi-trash me-1"></i> لغو

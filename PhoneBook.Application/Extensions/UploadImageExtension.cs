@@ -1,10 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using PhoneBook.Application.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PhoneBook.Application.Extensions
 {
@@ -28,7 +23,6 @@ namespace PhoneBook.Application.Extensions
                             File.Delete(thumbPath + deletefileName);
                     }
                 }
-
                 string OriginPath = orginalPath + fileName;
 
                 using (var stream = new FileStream(OriginPath, FileMode.Create))
@@ -47,10 +41,8 @@ namespace PhoneBook.Application.Extensions
                     if (width != null && height != null)
                         resizer.ImageResizer(orginalPath + fileName, thumbPath + fileName, width, height);
                 }
-
                 return true;
             }
-
             return false;
         }
 

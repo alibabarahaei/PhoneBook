@@ -1,19 +1,16 @@
-﻿using PhoneBook.Application.InterfaceServices;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.Extensions.Options;
+using PhoneBook.Application.InterfaceServices;
+using PhoneBook.Application.Models;
 using System.Net;
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
-using PhoneBook.Application.Models;
-using Microsoft.Extensions.Options;
 
 namespace PhoneBook.Application.Services
 {
 
     public class MessageSender : IMessageSender
     {
+
+        #region constructor
 
         private readonly EmailInformationModel _EmailInformationOptions;
 
@@ -23,16 +20,17 @@ namespace PhoneBook.Application.Services
             _EmailInformationOptions = emailInformationOptions.Value;
         }
 
+        #endregion
+
+
 
         public void SendEmail(string toEmail, string subject, string message, bool isMessageHtml = false)
         {
-
             using (var client = new SmtpClient())
             {
-
                 var credentials = new NetworkCredential()
                 {
-                    UserName = _EmailInformationOptions.Address, // without @gmail.com
+                    UserName = _EmailInformationOptions.Address, 
                     Password = _EmailInformationOptions.Password
                 };
                 client.UseDefaultCredentials = false;
@@ -44,7 +42,7 @@ namespace PhoneBook.Application.Services
                 using var emailMessage = new MailMessage()
                 {
                     To = { new MailAddress(toEmail) },
-                    From = new MailAddress("unknown.2380.unknown@gmail.com"), // with @gmail.com
+                    From = new MailAddress("unknown.2380.unknown@gmail.com"), 
                     Subject = subject,
                     Body = message,
                     IsBodyHtml = isMessageHtml
@@ -52,9 +50,7 @@ namespace PhoneBook.Application.Services
 
                 client.Send(emailMessage);
             }
-
             return;
-
         }
     }
 

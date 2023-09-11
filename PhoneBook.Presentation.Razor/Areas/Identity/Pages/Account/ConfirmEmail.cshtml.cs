@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using PhoneBook.Application.InterfaceServices;
@@ -13,13 +12,13 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
 
         #region constuctor
         private readonly IUserService _userService;
-        #endregion
 
         public ConfirmEmailModel(IUserService userService)
         {
             _userService = userService;
         }
 
+        #endregion
 
         public async Task<IActionResult> OnGet(string email, string code)
         {
@@ -42,7 +41,7 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
                     var result = await _userService.ConfirmEmailAsync(user, code);
                     if (result.Succeeded)
                     {
-                        ViewData["result"] ="ایمیل با موفقیت تایید شد";
+                        ViewData["result"] = "ایمیل با موفقیت تایید شد";
                         TempData["SuccessMessage"] = "ایمیل با موفقیت تایید شد";
                     }
                     else
@@ -50,7 +49,7 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
                         ViewData["result"] = "ایمیل  تایید نشد";
                         TempData["WarningMessage"] = "ایمیل  تایید نشد";
                     }
-                    
+
                 }
             }
             return Page();

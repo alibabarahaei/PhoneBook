@@ -1,21 +1,20 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.WebUtilities;
 using PhoneBook.Application.DTOs.Account;
 using PhoneBook.Application.InterfaceServices;
 using PhoneBook.Presentation.Razor.Areas.Identity.Pages.ViewModels;
-using AutoMapper;
-using Microsoft.AspNetCore.WebUtilities;
 using System.Text;
 
 namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
 {
-    [BindProperties]
+
     public class RegisterModel : PageModel
     {
 
         #region Properties
-
+        [BindProperty]
         public RegisterViewModel RegisterViewModel { get; set; }
         #endregion
 
@@ -72,7 +71,8 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
                 var user = await _userService.GetUserWithEmailAsync(RegisterViewModel.Email);
                 user.UrlEmailConfirmation = urlEmailConfirmation;
                 await _userService.UpdateUserAsync(user);
-                TempData["SuccessMessage"] = "با موفقیت ثبت نام شدید";
+                TempData["InfoMessage"] = "لطفا ایمیل را تایید کنید";
+                TempData["SuccessMessage"] = "با موفقیت ثبت نام شدید ";
                 return RedirectToPage("Login");
             }
             else
@@ -81,10 +81,13 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.Account
 
             }
         }
+
+
+
         [ValidateAntiForgeryToken]
-        public async Task<JsonResult> OnGetIsUserNameInUse(string userName)
+        public async Task<JsonResult> OnGetIsUserNameInUse(string UserName)
         {
-            var user = _userService.IsUserNameInUseAsync(userName);
+            var user = await _userService.IsUserNameInUseAsync(UserName);
             if (user == null)
                 return new JsonResult(true);
             return new JsonResult("نام کاربری وارد شده توسط شخص دیگری انتخاب شده است");

@@ -1,19 +1,16 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using PhoneBook.Application.InterfaceServices;
-using System.ComponentModel.DataAnnotations;
-using System.Xml.Linq;
-using AutoMapper;
 using PhoneBook.Application.DTOs.Account;
+using PhoneBook.Application.InterfaceServices;
 using PhoneBook.Presentation.Razor.Extensions;
 using PhoneBook.Presentation.Razor.Pages.ViewModels;
 
 namespace PhoneBook.Presentation.Razor.Pages.Profile
 {
-    [Authorize]
-    [BindProperties]
-    public class EditProfileModel : PageModel
+
+    public class EditProfileModel : SiteBasePage
     {
 
         #region properties
@@ -38,16 +35,13 @@ namespace PhoneBook.Presentation.Razor.Pages.Profile
 
 
 
-
-
-
         public async Task OnGet()
         {
 
-            var user = await _userService.GetUserWithUserIdAsync(User.GetUserId());  //TODO
-            editProfileViewModel.FirstName=user.FirstName;
-            editProfileViewModel.LastName=user.LastName;
-            editProfileViewModel.PhoneNumber=user.PhoneNumber;
+            var user = await _userService.GetUserWithUserIdAsync(User.GetUserId());
+            editProfileViewModel.FirstName = user.FirstName;
+            editProfileViewModel.LastName = user.LastName;
+            editProfileViewModel.PhoneNumber = user.PhoneNumber;
             editProfileViewModel.PathProfileImageBefore = user.PathProfileImage;
             editProfileViewModel.Gender = user.Gender ?? 'U';
 
@@ -59,13 +53,11 @@ namespace PhoneBook.Presentation.Razor.Pages.Profile
         public async Task<IActionResult> OnPost()
         {
 
-
-
             if (ModelState.IsValid)
             {
                 if (User.Identity.IsAuthenticated)
                 {
-                    var newUser=_mapper.Map<EditProfileDTO>(editProfileViewModel);
+                    var newUser = _mapper.Map<EditProfileDTO>(editProfileViewModel);
                     newUser.UserId = User.GetUserId();
                     var result = await _userService.EditProfileAsync(newUser);
 

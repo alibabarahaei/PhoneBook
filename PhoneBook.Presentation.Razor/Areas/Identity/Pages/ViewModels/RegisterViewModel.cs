@@ -11,7 +11,7 @@ namespace PhoneBook.Presentation.Razor.Areas.Identity.Pages.ViewModels
         [Display(Name = "نام کاربری")]
         [Required(ErrorMessage = "{0} را وارد کنید")]
         [StringLength(40, ErrorMessage = "طول {0} باید بین {2} و {1} باشد", MinimumLength = 6)]
-        [PageRemote(PageHandler = "IsUserNameInUse", HttpMethod = "Get")]
+        //[PageRemote(PageHandler = "IsUserNameInUse", HttpMethod = "Get")]
         public string UserName { get; set; }
 
 

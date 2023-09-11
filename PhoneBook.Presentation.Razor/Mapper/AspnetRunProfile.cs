@@ -11,7 +11,6 @@ namespace PhoneBook.Presentation.Razor.Mapper
     {
         public AspnetRunProfile()
         {
-            
             CreateMap<AddContactDTO, AddContactViewModel>().ReverseMap();
             CreateMap<EditContactDTO, EditContactViewModel>().ReverseMap();
             CreateMap<FilterContactsDTO, ListContactViewModel>().ReverseMap();

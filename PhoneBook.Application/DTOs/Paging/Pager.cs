@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PhoneBook.Application.DTOs.Paging
+﻿namespace PhoneBook.Application.DTOs.Paging
 {
     public class Pager
     {

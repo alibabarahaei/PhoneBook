@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using PhoneBook.Domain.Models.Contacts;
 using PhoneBook.Domain.Models.User;
-using System.Reflection;
 
 namespace PhoneBook.Infrastructure.EFCore.Context
 {

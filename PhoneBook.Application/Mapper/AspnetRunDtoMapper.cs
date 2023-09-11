@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using PhoneBook.Application.DTOs.Account;
 using PhoneBook.Application.DTOs.Contact;
 using PhoneBook.Domain.Models.Contacts;

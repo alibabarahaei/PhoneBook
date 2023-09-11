@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PhoneBook.Application.InterfaceServices;
@@ -19,20 +18,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 
+builder.Services.AddLiveReload();
 
-#region AddLiveReload
-
-
-
-builder.Services.AddLiveReload(config =>
-{
-    // optional - use config instead
-    //config.LiveReloadEnabled = true;
-    //config.FolderToMonitor = Path.GetFullname(Path.Combine(Env.ContentRootPath,"..")) ;
-});
-
-
-#endregion
 
 
 builder.Services.AddRazorPages();
@@ -41,7 +28,11 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddAutoMapper(typeof(Program).Assembly); 
 
+
+
 var configurationSection = builder.Configuration;
+
+
 
 #region Config Identity
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
@@ -58,7 +49,6 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 
 #region ConfigCookie
 
-
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.ExpireTimeSpan = TimeSpan.FromDays(10);
@@ -73,16 +63,12 @@ builder.Services.ConfigureApplicationCookie(options =>
 #endregion
 
 
-#region MyRegion
+#region Options
 
 builder.Services.Configure<EmailInformationModel>(builder.Configuration.GetSection("Gmail"));
 builder.Services.Configure<StorePathModel>(builder.Configuration.GetSection("StorePath"));
 
 #endregion
-
-
-
-
 
 
 
@@ -105,6 +91,8 @@ builder.Services.AddDbContext<PhoneBookDbContext>(option =>
 
 
 #endregion
+
+
 
 var app = builder.Build();
 

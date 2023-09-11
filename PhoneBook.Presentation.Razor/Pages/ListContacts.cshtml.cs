@@ -8,8 +8,8 @@ using PhoneBook.Presentation.Razor.Extensions;
 
 namespace PhoneBook.Presentation.Razor.Pages
 {
-    [Authorize]
-    public class ListContactsModel : PageModel
+ 
+    public class ListContactsModel : SiteBasePage
     {
         #region properties
 

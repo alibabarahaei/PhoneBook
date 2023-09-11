@@ -7,10 +7,6 @@ namespace PhoneBook.Presentation.Razor.Pages.ViewModels
 
         #region properties
 
-
-
-
-
         [Display(Name = "نام")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمی تواند بیشتر از {1} کاراکتر باشد")]
@@ -37,10 +33,6 @@ namespace PhoneBook.Presentation.Razor.Pages.ViewModels
         [Display(Name = "تصویر پروفایل")]
         [Required(ErrorMessage = "لطفا {0} را آپلود کنید")]
         public IFormFile ContactImage { get; set; }
-
-
-
-
 
 
 

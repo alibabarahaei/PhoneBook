@@ -4,24 +4,16 @@ using PhoneBook.Application.DTOs.Contact;
 using PhoneBook.Application.DTOs.Paging;
 using PhoneBook.Application.Extensions;
 using PhoneBook.Application.InterfaceServices;
+using PhoneBook.Application.Mapper;
 using PhoneBook.Application.Utilities;
 using PhoneBook.Domain.InterfaceRepositories.Base;
 using PhoneBook.Domain.Models.Contacts;
 using PhoneBook.Domain.Models.User;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PhoneBook.Application.Mapper;
 
 namespace PhoneBook.Application.Services
 {
     public class ContactService:IContactService
     {
-
-
-
         #region constructor
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IGenericRepository<Contact> _contactRepository;
@@ -34,9 +26,6 @@ namespace PhoneBook.Application.Services
         }
 
         #endregion
-
-
-
 
 
         public async Task<ContactResult> AddContactAsync(AddContactDTO addContactDTO)
@@ -61,6 +50,8 @@ namespace PhoneBook.Application.Services
             return ContactResult.Error;
         }
 
+
+
         public async Task<ContactResult> DeleteContactAsync(DeleteContactDTO deleteContactDTO)
         {
             var contact = await _contactRepository.GetQuery().Include(c=>c.User).FirstOrDefaultAsync();
@@ -74,6 +65,9 @@ namespace PhoneBook.Application.Services
 
             return ContactResult.Error;
         }
+
+
+
 
         public async Task<ContactResult> EditContactAsync(EditContactDTO editContactDTO)
         {
@@ -97,6 +91,9 @@ namespace PhoneBook.Application.Services
             return ContactResult.Success;
 
         }
+
+
+
 
         public async Task<FilterContactsDTO> FilterContactsAsync(FilterContactsDTO filterontactsDTO)
         {
@@ -128,6 +125,7 @@ namespace PhoneBook.Application.Services
         }
     
 
+
         public async Task<EditContactDTO> GetContactByIdAsync(GetContactByIdDTO getContactByIdDTO)
         {
             var contact =await _contactRepository.GetQuery().Include("User").FirstOrDefaultAsync(c => (c.User.Id == getContactByIdDTO.UserId) && (c.Id == getContactByIdDTO.ContactId));
@@ -142,8 +140,6 @@ namespace PhoneBook.Application.Services
 
 
 
-        #region dispose
-
 
         public void Dispose()
         {
@@ -155,7 +151,7 @@ namespace PhoneBook.Application.Services
                 _ = _contactRepository.DisposeAsync().AsTask();
         }
  
-        #endregion
+    
 
     }
 }

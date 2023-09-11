@@ -24,17 +24,6 @@ namespace PhoneBook.Application.Services
         #endregion
 
 
-        #region dispose
-
-        public void Dispose()
-        {
-            _userManager.Dispose();
-        }
-
-
-        #endregion
-
-
         public async Task<IdentityResult> RegisterUserAsync(RegisterUserDTO registerUserDTO)
         {
             var user = new ApplicationUser()
@@ -43,13 +32,6 @@ namespace PhoneBook.Application.Services
                 Email = registerUserDTO.Email,
             };
             var IdentityResult = await _userManager.CreateAsync(user, registerUserDTO.Password);
-            //if (IdentityResult.Succeeded)
-            //{
-
-            //var emailConfirmationNumber = rnd.Next(10000, 100000);
-            //_messageSender.SendEmail(registerUserDTO.Email, "تاییدیه ایمیل", $"code : {emailConfirmationNumber}");
-
-            //}
             return IdentityResult;
 
         }
@@ -73,10 +55,12 @@ namespace PhoneBook.Application.Services
         }
 
 
+
         public async Task LogOutUserAsync()
         {
             await _signInManager.SignOutAsync();
         }
+
 
 
         public async Task<IdentityResult> EditProfileAsync(EditProfileDTO editProfileDTO)
@@ -103,10 +87,14 @@ namespace PhoneBook.Application.Services
             return await _userManager.UpdateAsync(currentUser);
         }
 
+
+
         public async Task<ApplicationUser> GetUserWithUserIdAsync(string userId)
         {
             return await _userManager.FindByIdAsync(userId);
         }
+
+
 
         public async Task<string> GetUserNameWithUserIdAsync(string userId)
         {
@@ -114,22 +102,30 @@ namespace PhoneBook.Application.Services
             return user.UserName;
         }
 
+
+
         public async Task<string> GetUserNameWithClaimsPrincipalAsync(ClaimsPrincipal claimsPrincipal)
         {
             var user = await GetUserWithClaimsPrincipalAsync(claimsPrincipal);
             return user.UserName;
         }
 
+
+
         public async Task<ApplicationUser> GetUserWithClaimsPrincipalAsync(ClaimsPrincipal claimsPrincipal)
         {
             return await _userManager.GetUserAsync(claimsPrincipal);
         }
+
+
+
 
         public async Task<IdentityResult> ChangePasswordAsync(ChangepasswordDTO changepasswordDTO)
         {
             var user = await GetUserWithUserIdAsync(changepasswordDTO.UserId);
             return await _userManager.ChangePasswordAsync(user, changepasswordDTO.CurrentPassword, changepasswordDTO.NewPassword);
         }
+
 
         public List<UserNotEmailConfirmedDTO> GetUsersNotEmailConfirmed()
         {
@@ -143,12 +139,16 @@ namespace PhoneBook.Application.Services
             return userNotEmailConfirmed;
         }
 
+
+
         public async Task<string> GetEmailConfirmationTokenAsync(string email)
         {
             var user = await GetUserWithEmailAsync(email);
             var emailConfirmationToken = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             return emailConfirmationToken;
         }
+
+
 
         public async Task DeleteUrlEmailConfirmationWithEmailAsync(List<string> emails)
         {
@@ -161,10 +161,14 @@ namespace PhoneBook.Application.Services
         }
 
 
+
+
         public async Task<ApplicationUser> GetUserWithEmailAsync(string email)
         {
             return await _userManager.FindByEmailAsync(email);
         }
+
+
 
         public async Task<IdentityResult> UpdateUserAsync(ApplicationUser user)
         {
@@ -172,15 +176,25 @@ namespace PhoneBook.Application.Services
             return await _userManager.UpdateAsync(user);
         }
 
+
+
         public async Task<IdentityResult> ConfirmEmailAsync(ApplicationUser user, string code)
         {
             return await _userManager.ConfirmEmailAsync(user, code);
 
         }
 
+
+
         public async Task SignOutAsync()
         {
             await _signInManager.SignOutAsync();
+        }
+
+        public void Dispose()
+        {
+            _userManager.Dispose();
+            
         }
     }
 }
